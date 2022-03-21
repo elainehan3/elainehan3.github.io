@@ -26,10 +26,3 @@ h1 {
       font-size: 20px;
     }
   }
-
-a.anchor {
-    display: block;
-    position: relative;
-    top: calc(0 - $topBarHeight);
-    visibility: hidden;
-}
