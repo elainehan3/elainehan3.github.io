@@ -26,7 +26,7 @@ export default function AboutMe() {
     },
     {
       id: "art",
-      title: "My Art",
+      title: "Art",
     },
   ];
 
