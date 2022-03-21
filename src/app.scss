@@ -1,0 +1,24 @@
+@import 'global.scss';
+
+.app {
+  height: 100vh;
+  .sections {
+    width: 100%;
+    height: $pageHeight;
+    background: $mainColor;
+    position: relative;
+    top: $topBarHeight;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    scrollbar-width: none; //for firefox
+    &::webkit-scrollbar{
+      display: none;
+    }
+
+    > * {
+      width: 100vw;
+      //height: $pageHeight;
+      scroll-snap-align: start; 
+    }
+  }
+}

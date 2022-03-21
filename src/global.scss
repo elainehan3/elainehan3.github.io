@@ -1,0 +1,35 @@
+$mainColor: lightCoral;
+$lightColor: white;
+$darkColor: black;
+$accent1Color: lightCoral;
+$accent2Color: rgb(89, 207, 89);
+
+
+
+$topBarHeight: 60px;
+$pageHeight: calc(100vh - 60px);
+$sidePadding: calc(0.03 * 100vw);
+$topBottomPadding: 30px;
+//@import '../../global.scss/';
+
+$mobileWidth: 768px;
+
+@mixin mobile {
+    @media (max-width: #{$mobileWidth}){
+        @content
+    }
+}
+
+h1 {
+    font-size: 50px;
+    @include mobile{
+      font-size: 20px;
+    }
+  }
+
+a.anchor {
+    display: block;
+    position: relative;
+    top: calc(0 - $topBarHeight);
+    visibility: hidden;
+}

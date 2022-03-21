@@ -1,0 +1,116 @@
+@import "../../global.scss";
+
+.projects {
+  background-color: $accent1Color;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+  padding: $topBottomPadding 0;
+  
+  h1 {
+    color: $lightColor;
+  }
+
+  .slider {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @include mobile {
+      justify-content: center;
+    }
+
+    .container {
+      width: 100vw;
+      height: 100%;
+      flex-direction: column;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .item {
+        width: 700px;
+        height: 250px;
+        background-color: $lightColor;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        margin: 15px 0;
+
+        @include mobile {
+          width: 80%;
+          height: 150px;
+        }
+        .left {
+          flex: 8;
+          height: 80%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          .leftContainer {
+            width: 90%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            .imgContainer {
+              width: 40px;
+              height: 40px;
+              border-radius: 50%;
+              background-color: rgb(245, 179, 155);
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              @include mobile {
+                width: 20px;
+                height: 20px;
+              }
+              img {
+                width: 25px;
+                @include mobile {
+                  width: 15px;
+                }
+              }
+            }
+            h2 {
+              font-size: 20px;
+              margin: 5px 0;
+              @include mobile{
+                font-size: 16px;
+              }
+            }
+            h3 {
+              font-size: 14px;
+              margin-bottom: 5px;
+              color: $accent2Color;
+            }
+            p {
+              font-size: 13px;
+            }
+            span {
+              font-size: 12px;
+              font-weight: 600;
+              text-decoration: underline;
+              cursor: pointer;
+            }
+          }
+        }
+        .right {
+          flex: 4;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          overflow: hidden;
+          img {
+            width: 400px;
+            transform: rotate(-10deg);
+          }
+        }
+      }
+    }
+  }
+}
