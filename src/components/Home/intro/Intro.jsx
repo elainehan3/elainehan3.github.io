@@ -9,9 +9,22 @@ export default function Intro() {
 
   
   useEffect(() => {
-    init(hi.current, { showCursor: false, loop: false, strings: [ 'Hi! My name is'] });
-    init(elaine.current, { showCursor: false, loop: false, startDelay: 2000, strings: [ 'Elaine.'] });
-    init(nice.current, { showCursor: false, loop: false, startDelay: 3200, strings: [ 'Nice to meet you :)'] });
+    init(hi.current, { 
+      showCursor: false, 
+      loop: false, 
+      strings: [ 'Hi! My name is'] });
+    init(elaine.current, {
+      showCursor: false, 
+      loop: false, 
+      startDelay: 2000, 
+      strings: [ 'Elaine.']
+    });
+    init(nice.current, { 
+      showCursor: false, 
+      loop: false, 
+      startDelay: 3200,
+      strings: [ 'Nice to meet you :)'] 
+    });
   }, []);
 
   return (
@@ -27,7 +40,7 @@ export default function Intro() {
           <h1> <span ref={elaine}></span> </h1>
           <h3> <span ref={nice}></span> </h3>
         </div>
-        <a href="#projects">
+        <a href="#aboutMe">
           <img src="assets/down.png" alt="" />
         </a>
       </div>

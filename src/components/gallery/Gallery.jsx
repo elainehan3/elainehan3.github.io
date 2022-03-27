@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
-import AboutMeList from "../aboutMeList/AboutMeList";
-import "./aboutMe.scss";
+import GalleryList from "../galleryList/GalleryList";
+import "./gallery.scss";
 import {
-  firstAboutMe,
-  hobbiesAboutMe,
-  interestsAboutMe,
-  artAboutMe,
-} from "../../data";
+  firstGallery,
+  hobbiesGallery,
+  interestsGallery,
+  artGallery,
+} from "../../data/data";
 
-export default function AboutMe() {
+export default function Gallery() {
   const [selected, setSelected] = useState("featured");
   const [data, setData] = useState([]);
   const list = [
@@ -33,28 +33,28 @@ export default function AboutMe() {
   useEffect(() => {
     switch (selected) {
       case "overview":
-        setData(firstAboutMe);
+        setData(firstGallery);
         break;
       case "hobbies":
-        setData(hobbiesAboutMe);
+        setData(hobbiesGallery);
         break;
       case "interests":
-        setData(interestsAboutMe);
+        setData(interestsGallery);
         break;
       case "design":
-        setData(artAboutMe);
+        setData(artGallery);
         break;
       default:
-        setData(firstAboutMe);
+        setData(firstGallery);
     }
   }, [selected]);
 
   return (
-    <div className="aboutMe" id="aboutMe">
+    <div className="gallery" id="gallery">
       <h1>About Me</h1>
       <ul>
         {list.map((item) => (
-          <AboutMeList
+          <GalleryList
             title={item.title}
             active={selected === item.id}
             setSelected={setSelected}

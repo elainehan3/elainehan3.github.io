@@ -1,7 +1,7 @@
 @import "../../global.scss";
 
 .contact {
-  background-color: $lightColor;
+  background-color: $background2Color;
   display: flex;
   //padding-top: $topBottomPadding;
   //padding-bottom: $topBottomPadding;
@@ -24,6 +24,7 @@
   }
   .right {
     flex: 1;
+    z-index: 5;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -33,6 +34,26 @@
     h2 {
       font-size: 30px;
       margin: 20px;
+    }
+
+    .links {
+      display: flex;
+      flex-direction: row;
+      margin: 20px;
+      align-items: center;
+      .icon {
+        font-size: 40px;
+        margin: 0 10px;
+      }
+      a {
+        font-size: 30px;
+        text-decoration: none;
+        color: $topBarLinkColor;
+        //margin: 0 10px;
+      }
+      a:hover {
+        color: $linkColor;
+      }
     }
 
     form {
@@ -80,6 +101,28 @@
       }
       span {
         color: green;
+      }
+    }
+  }
+  .imgContainer {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgb(245, 179, 155);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    @include mobile {
+      display: flex;
+      width: 20px;
+      height: 20px;
+    }
+    img {
+      width: 30px;
+      border-radius: 50%;
+      @include mobile {
+        width: 20px;
       }
     }
   }

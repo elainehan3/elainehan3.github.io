@@ -1,12 +1,12 @@
 @import 'global.scss';
 
-.app {
-  height: 100vh;
+.page {
+  width: 100%;
+  background: $lightColor;
   .sections {
-    width: 100%;
-    background: $lightColor;
-    position: relative;
-    top: 30px;
+    //height: $pageHeight;
+    //position: relative;
+    //top: $topBarHeight;
     scroll-behavior: smooth;
     scroll-snap-type: y mandatory;
     scrollbar-width: none; //for firefox
@@ -17,7 +17,7 @@
     > * {
       width: 100vw;
       //height: $pageHeight;
-      //scroll-snap-align: start; 
+      scroll-snap-align: start; 
     }
   }
 }

@@ -1,4 +1,4 @@
-export const firstAboutMe = [
+export const firstGallery = [
     {
       id: 1,
       title: "Social Media App",
@@ -37,7 +37,7 @@ export const firstAboutMe = [
     },
   ];
   
-  export const hobbiesAboutMe = [
+  export const hobbiesGallery = [
     {
       id: 1,
       title: "Web Social Media App",
@@ -70,7 +70,7 @@ export const firstAboutMe = [
     },
   ];
   
-  export const interestsAboutMe = [
+  export const interestsGallery = [
     {
       id: 1,
       title: "Mobile Social Media App",
@@ -109,7 +109,7 @@ export const firstAboutMe = [
     },
   ];
   
-  export const artAboutMe = [
+  export const artGallery = [
     {
       id: 1,
       title: "Design Social Media App",

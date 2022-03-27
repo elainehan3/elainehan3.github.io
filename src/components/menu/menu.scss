@@ -1,12 +1,12 @@
 @import "../../global.scss";
 
 .menu {
-  width: 300px;
+  width: 100vw;
   height: 100vh;
-  background-color: $mainColor;
+  background-color: $mainTranspColor;
   position: fixed;
   top: 0;
-  right: -300px;
+  right: -100vw;
   z-index: 2;
   display: flex;
   flex-direction: column;
@@ -22,10 +22,11 @@
     margin: 0;
     padding: 0;
     list-style: none;
-    font-size: 30px;
+    font-size: 40px;
     font-weight: bold;
     color: $lightColor;
     width: 60%;
+    text-align: center;
 
     li {
       margin-bottom: 25px;

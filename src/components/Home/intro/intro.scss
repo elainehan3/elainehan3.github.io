@@ -1,4 +1,4 @@
-@import "../../global.scss";
+@import "../../../global.scss";
 
 .intro {
   background-color: $lightColor;
@@ -59,25 +59,32 @@
         align-items: center;
       }
       h1 {
-        font-size: 60px;
+        font-size: 80px;
         @include mobile{
-          font-size: 40px;
+          font-size: 60px;
         }
         span {
+          font-family: $headerFonts;
           font-size: inherit;
           color: $accent1Color;
         }
       }
       h2 {
-        font-size: 40px;
+        font-size: 50px;
         @include mobile{
-          font-size: 35px;
+          font-size: 45px;
+        }
+        span {
+          font-family: $header2Fonts;
         }
       }
       h3 {
-        font-size: 30px;
+        font-size: 40px;
         .ityped-cursor {
           animation: blink 1s infinite;
+        }
+        span {
+          font-family: $header2Fonts;
         }
         @keyframes blink {
             50%{opacity: 1;}

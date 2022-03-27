@@ -1,0 +1,157 @@
+@import "../../../global.scss";
+
+.aboutMe {
+  background-color: $background2Color;
+  display: flex;
+  //padding-top: $topBottomPadding;
+  //padding-bottom: $topBottomPadding;
+  overflow-x: hidden;
+  flex-direction: column;
+  align-items: center;
+
+  h2 {
+    color: $darkColor;
+    margin-top: 30px;
+  }
+
+  .aboutContainer {
+    margin: $topBottomPadding;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    overflow-x: hidden;
+    width:100%;
+    @include mobile {
+      flex-direction: column;
+    }
+    .left {
+      flex: 2;
+      overflow: hidden;
+      img {
+        height: 100%;
+        @include mobile {
+          height: 150px;
+        }
+      }
+    }
+    .right {
+      flex: 3;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-between;
+      @include mobile {
+        align-items: center;
+      }
+
+      p {
+        font-size: 20px;
+        padding: 10px 30px;
+      }
+
+      .horizList {
+        flex-direction: row;
+        padding: 10px 30px;
+        .title {
+          font-weight: bold;
+        }
+        p {
+          padding: 0;
+        }
+      }
+
+      .links {
+        h3 {
+          margin: 0 10px;
+        }
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 10px 20px;
+        .icon {
+          font-size: 30px;
+          margin: 0 10px;
+        }
+        a {
+          font-size: 30px;
+          text-decoration: none;
+          color: $topBarLinkColor;
+          //margin: 0 10px;
+        }
+        a:hover {
+          color: $linkColor;
+        }
+      }
+
+      form {
+        width: 70%;
+        height: 70%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        input {
+          width: 300px;
+          height: 30px;
+          font-size: 14px;
+          margin-bottom: 20px;
+          @include mobile {
+            width: 80vw;
+            height: 20px;
+          }
+        }
+
+        textarea {
+          width: 300px;
+          height: 200px;
+          font-size: 14px;
+          margin-bottom: 20px;
+          @include mobile {
+            width: 80vw;
+            height: 100px;
+          }
+        }
+
+        button {
+          width: 150px;
+          height: 40px;
+          color: $lightColor;
+          background-color: $accent1Color;
+          border: none;
+          border-radius: 10px;
+          font-weight: 500;
+          cursor: pointer;
+
+          &:focus {
+            outline: none;
+          }
+        }
+        span {
+          color: green;
+        }
+      }
+    }
+    .imgContainer {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-color: rgb(245, 179, 155);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      margin-right: 10px;
+      @include mobile {
+        display: flex;
+        width: 20px;
+        height: 20px;
+      }
+      img {
+        width: 30px;
+        border-radius: 50%;
+        @include mobile {
+          width: 20px;
+        }
+      }
+    }
+  }
+}
