@@ -13,6 +13,7 @@
   }
   &.active {
     color: $mainColor;
+    text-decoration: underline;
     .item {
       background-color: $mainColor;
       color: $lightColor;

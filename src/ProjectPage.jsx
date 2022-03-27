@@ -1,11 +1,12 @@
 
 import './page.scss'
+import ProjectAcc from './components/ProjectPage/projectAcc/ProjectAcc'
 
 function ProjectPage() {
   return (
      <div className="page">
      <div className="sections">
-     <h1>Page Under Construction!</h1>
+    <ProjectAcc/>
      </div>
     </div>
   );
