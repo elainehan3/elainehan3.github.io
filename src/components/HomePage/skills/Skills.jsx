@@ -5,7 +5,7 @@ export default function Skills() {
   <div className="skills" id="skills">
   {/* <div className="resumeHead"><h1>Resume</h1></div> */}
   <h2>Skills</h2>
-    <div className="aboutContainer">
+    <div className="textAndPicture">
       <div className="right">
         <div className="horizList">
           <h3>Programming Languages:</h3>

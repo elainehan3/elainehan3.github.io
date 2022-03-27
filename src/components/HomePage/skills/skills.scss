@@ -1,6 +1,6 @@
 @import "../../../global.scss";
 
-.aboutMe {
+.skills {
   background-color: $background2Color;
   display: flex;
   //padding-top: $topBottomPadding;
@@ -8,19 +8,36 @@
   overflow-x: hidden;
   flex-direction: column;
   align-items: center;
+  padding-bottom: $topBottomPadding;
+
+  .resumeHead {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    background-color: $mainColor;
+    h1 {
+      color: $lightColor;
+    }
+  }
+
+  
 
   h2 {
     color: $darkColor;
     margin-top: 30px;
   }
 
-  .aboutContainer {
-    margin: $topBottomPadding;
+  .textAndPicture {
+    margin: 20px;
     display: flex;
     flex-direction: row;
     align-items: center;
     overflow-x: hidden;
     width:100%;
+    color: $darkColor;
     @include mobile {
       flex-direction: column;
     }
@@ -40,9 +57,6 @@
       flex-direction: column;
       align-items: flex-start;
       justify-content: space-between;
-      @include mobile {
-        align-items: center;
-      }
 
       p {
         font-size: 20px;
@@ -52,10 +66,9 @@
       .horizList {
         flex-direction: row;
         padding: 10px 30px;
-        .title {
-          font-weight: bold;
-        }
+        color: $mainColor;
         p {
+          color: $darkColor;
           padding: 0;
         }
       }

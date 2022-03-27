@@ -3,9 +3,9 @@ import GalleryList from "../galleryList/GalleryList";
 import "./gallery.scss";
 import {
   firstGallery,
-  hobbiesGallery,
-  interestsGallery,
-  artGallery,
+  secondGallery,
+  thirdGallery,
+  fourthGallery,
 } from "../../data/data";
 
 export default function Gallery() {
@@ -36,13 +36,13 @@ export default function Gallery() {
         setData(firstGallery);
         break;
       case "hobbies":
-        setData(hobbiesGallery);
+        setData(secondGallery);
         break;
       case "interests":
-        setData(interestsGallery);
+        setData(thirdGallery);
         break;
       case "design":
-        setData(artGallery);
+        setData(fourthGallery);
         break;
       default:
         setData(firstGallery);

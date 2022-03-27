@@ -179,3 +179,73 @@ h5 {
     }
   }
 }
+
+
+.textAndPicture {
+  margin: $topBottomPadding;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  overflow-x: hidden;
+  width:100%;
+  @include mobile {
+    flex-direction: column;
+  }
+  .left {
+    flex: 2;
+    overflow: hidden;
+    margin: 20px;
+    img {
+      height: 100%;
+      @include mobile {
+        height: 150px;
+      }
+    }
+  }
+  .right {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    @include mobile {
+      align-items: center;
+    }
+    p {
+      font-size: 20px;
+      padding: 10px 30px;
+    }
+    .horizList {
+      flex-direction: row;
+      padding: 10px 30px;
+      .title {
+        font-weight: bold;
+      }
+      p {
+        padding: 0;
+      }
+    }
+    .links {
+      h3 {
+        margin: 0 10px;
+      }
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 10px 20px;
+      .icon {
+        font-size: 30px;
+        margin: 0 10px;
+      }
+      a {
+        font-size: 30px;
+        text-decoration: none;
+        color: $topBarLinkColor;
+        //margin: 0 10px;
+      }
+      a:hover {
+        color: $linkColor;
+      }
+    }
+  }
+}

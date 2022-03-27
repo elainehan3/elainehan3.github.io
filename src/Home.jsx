@@ -1,17 +1,13 @@
 
-import Intro from './components/Home/intro/Intro'
-import AboutMe from './components/Home/aboutMe/AboutMe'
-import Skills from './components/Home/skills/Skills'
-import Gallery from './components/gallery/Gallery'
-import Projects from './components/Home/projectList/ProjectList'
-import Experience from './components/Home/experience/Experience'
-import Activities from './components/Home/activities/Activities'
+import Intro from './components/HomePage/intro/Intro'
+import AboutMe from './components/HomePage/aboutSmall/AboutSmall'
+import Skills from './components/HomePage/skills/Skills'
+import Projects from './components/HomePage/projectList/ProjectList'
+import Experience from './components/HomePage/experience/Experience'
+import Activities from './components/HomePage/activities/Activities'
 import './page.scss'
-// import { useState } from "react";
-// import Menu from "./components/menu/Menu";
 
 function Home() {
-  //const [menuOpen,setMenuOpen] = useState(false)
   return (
     <div className="page">
      <div className="sections">
@@ -21,7 +17,6 @@ function Home() {
        <Projects/>
        <Experience/>
        <Activities/>
-       <Gallery/>
      </div>
     </div>
   );

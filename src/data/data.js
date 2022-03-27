@@ -37,7 +37,7 @@ export const firstGallery = [
     },
   ];
   
-  export const hobbiesGallery = [
+  export const secondGallery = [
     {
       id: 1,
       title: "Web Social Media App",
@@ -70,7 +70,7 @@ export const firstGallery = [
     },
   ];
   
-  export const interestsGallery = [
+  export const thirdGallery = [
     {
       id: 1,
       title: "Mobile Social Media App",
@@ -109,7 +109,7 @@ export const firstGallery = [
     },
   ];
   
-  export const artGallery = [
+  export const fourthGallery = [
     {
       id: 1,
       title: "Design Social Media App",
