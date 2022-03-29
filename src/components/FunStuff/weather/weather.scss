@@ -1,14 +1,16 @@
 @import "../../../global.scss";
 
+$weatherBack: rgb(234, 241, 243);
 $weatherC: rgb(215, 234, 240);
-$textColor: rgb(33, 55, 104);
-$accentTextColor: #596280;
+$textColor: #4F5D73;
+$accentTextColor: rgb(114, 126, 142);
 
 .weather {
   text-align: center;
   display: flex;
   flex-wrap: wrap;
-  background: $background2Color;
+  background: $weatherBack;
+  padding-bottom: 40px;
   @include mobile {
     flex-direction: column;
     align-items: center;
@@ -83,7 +85,6 @@ $accentTextColor: #596280;
 // }
 
 .form-container .sub-btn {
-  color: $darkColor;
   width: 200px;
   height: 45px;
   padding: 0 25px;

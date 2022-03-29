@@ -16,6 +16,11 @@
 
   &.active {
     right: 0;
+    Link {
+      font-size: inherit;
+      color: $lightColor;
+      text-decoration: none;
+    }
   }
 
   ul {
@@ -30,14 +35,14 @@
 
     li {
       margin-bottom: 25px;
-      a {
-        font-size: inherit;
-        color: $lightColor;
-        text-decoration: none;
-      }
-      a:hover {
-        text-decoration: underline;
-      }
     }
+  }
+  Link, a {
+    font-size: inherit;
+    color: $lightColor;
+    text-decoration: none;
+  }
+  Link:hover, a:hover{
+    text-decoration: underline;
   }
 }

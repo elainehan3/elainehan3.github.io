@@ -86,14 +86,14 @@ class Weather extends Component {
         this.setState({
           city: response.city.name,
           country: response.city.country,
-          temperature: response.list[0].main.temp,
+          temperature: Math.round(response.list[0].main.temp),
           humidity: response.list[0].main.humidity,
           condition: response.list[0].weather[0].description,
           icon: response.list[0].weather[0].icon,
           wind: [response.list[0].wind.speed, response.list[0].wind.deg],
           feels_like: response.list[0].main.feels_like,
-          temp_min: response.list[0].main.temp_min,
-          temp_max: response.list[0].main.temp_max,
+          temp_min: Math.round(response.list[0].main.temp_min),
+          temp_max: Math.round(response.list[0].main.temp_max),
           pressure: response.list[0].main.pressure,
           error: undefined,
           incorrectCountryNameError: undefined,
@@ -207,7 +207,7 @@ class Weather extends Component {
     return (
       <div className="weather">
         <header role="banner" className="title">
-          <img src="assets/Circle-icons-weather.svg.png" alt="" />
+          <img src="assets/Circle-icons-weather.svg" alt="" />
           <h1>Weather</h1>
         </header>
         <Searches

@@ -9,7 +9,7 @@ export default function ProjectList() {
         className="cards"
       >
         {projects.map((d) => (
-          <div className="container">
+          <div className="container" key={d.title}>
             <div className="item">
               <div className="left">
                 <div className="leftContainer">

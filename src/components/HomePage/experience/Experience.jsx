@@ -7,10 +7,10 @@ export default function Experience() {
     <div className="experience" id="experience">
       <h1>Experience</h1>
       <div
-        className="cards"
+        className="cards" 
       >
         {experience.map((d) => (
-          <div className="container">
+          <div className="container" key={d.title}>
             <div className="item">
               <div className="right">
                 <img

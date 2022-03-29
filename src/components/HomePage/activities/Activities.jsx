@@ -7,7 +7,7 @@ export default function Activities() {
       <h1>Other Activities</h1>
       <div className="cards">
         {activities.map((d) => (
-          <div className="container">
+          <div className="container" key={d.title}>
             <div className="item">
               <div className="right">
                 <img

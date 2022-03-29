@@ -40,7 +40,7 @@ function WeatherHead(props) {
         <div className="weather-details">
           {props.humidity && props.condition && props.wind[0] && props.wind[1] &&
             <div>
-              <p className="weather-stat"><AirIcon className="icon" /><span className="stat-title">Wind:</span> {props.wind[0]} kPa</p>
+              <p className="weather-stat"><AirIcon className="icon" /><span className="stat-title">Wind:</span> {props.wind[0]} km/h</p>
               <p className="weather-stat"><OpacityIcon className="icon" /><span className="stat-title">Humidity:</span> {props.humidity} %</p>
               <p className="weather-stat"><CompressIcon className="icon" /><span className="stat-title">Pressure:</span> {props.pressure} hPa</p>
 
