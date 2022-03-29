@@ -1,6 +1,6 @@
 import "./topbar.scss";
 //import { LinkedIn } from "@mui/icons-material";
-import { menuLinks } from "../../data/siteData";
+import { menuLinks } from "../../../data/siteData";
 //import { Link } from "react-router-dom";
 
 export default function Topbar({ menuOpen, setMenuOpen }) {

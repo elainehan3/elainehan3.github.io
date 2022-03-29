@@ -1,10 +1,11 @@
 import './page.scss'
+import Weather from './components/FunStuff/weather/Weather';
 
 function FunStuff() {
   return (
      <div className="page">
      <div className="sections">
-     <h1>Page Under Construction</h1>
+      <Weather/>
      </div>
     </div>
   );

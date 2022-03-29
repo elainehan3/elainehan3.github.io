@@ -1,4 +1,4 @@
-@import "../../global.scss";
+@import "../../../global.scss";
 
 .contact {
   background-color: $background2Color;
@@ -6,6 +6,7 @@
   //padding-top: $topBottomPadding;
   //padding-bottom: $topBottomPadding;
   overflow-x: hidden;
+  margin-top: 50px;
 
   @include mobile {
     flex-direction: column;

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import GalleryList from "../galleryList/GalleryList";
+import GalleryList from "./GalleryList";
 import "./gallery.scss";
 import {
   firstGallery,
