@@ -24,21 +24,21 @@ class Searches extends Component {
   render() {
     //console.log('Search render');
     return (
-      <section className="form-container">
+      <section className="search-container">
         <form className="form" onSubmit={this.handleSubmit}>
-          <div className="form-row">
+          <div className="search-row">
             <input
               aria-label="Search by city name"
               aria-required="true"
               placeholder="Search city name"
-              className="form-text"
+              className="search-text"
               type="text" name="city"
               required />
           </div>
           <CountrySearch
             countryList={this.props.countryList}
           />
-          <button className="sub-btn" type="submit">Get Weather</button>
+          <button className="getw-btn" type="submit">Get Weather</button>
         </form>
       </section>
     );

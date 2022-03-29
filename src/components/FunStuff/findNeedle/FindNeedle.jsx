@@ -6,7 +6,7 @@ import "./findneedle.scss";
 //import Confetti from "react-dom-confetti"
 
 export default function FindNeedle() {
-  const needleWidth = 40;
+  const needleWidth = 45;
   const imgHeight = 400;
   const [found, setFound] = useState(false);
   //const [showConfetti, setShowConfetti] = useState(false)
@@ -27,7 +27,7 @@ export default function FindNeedle() {
     //setShowConfetti(false);
     setShowPlayAgain(false);
     setPosY(getRandY(imgHeight));
-    setPosX(getRandX(80));
+    setPosX(getRandX(90));
   }
 
 
@@ -42,11 +42,11 @@ export default function FindNeedle() {
     setFound(true)
   }
   return (
-    <div className="findneedle">
+    <div className="findneedle" id="findneedle">
       <div className="needleHead">
         <h2>Find the needle in the haystack</h2>
         <div className="descr">
-          <p>Find </p><img className="icon" src="assets/needleblack.svg" alt="needle" /><p> hidden in the image below</p>
+          <p>Find the</p><img className="icon" src="assets/needleblack.svg" alt="needle" /><p> hidden in the image below</p>
         </div>
       </div>
       <div className="gameBox">
@@ -58,8 +58,10 @@ export default function FindNeedle() {
               //opacity: found ? 0 : 1,
             }} />
         </div>
-        <div className="needle-wrapper"
+        <div className={found ? "needle-wrapper found" : "needle-wrapper"}
           style={{
+            // top: "-200px",
+            // left: "50%",
             top: "-" + PosY + "px",
             left: PosX + "%",
           }}>
@@ -73,12 +75,10 @@ export default function FindNeedle() {
               //left: "88%",
             }}
           />
-          {showPlayAgain && (<div className="foundDis">
-            <p>You found the needle!</p>
-            <button onClick={restart}>Play Again!</button>
-            </div>
-          )}
-          
+        </div>
+        <div className={showPlayAgain ? "foundDis display" : "foundDis"}>
+            <p>You found it!</p>
+            <button onClick={restart}>Play again!</button>
         </div>
       </div>
     </div>

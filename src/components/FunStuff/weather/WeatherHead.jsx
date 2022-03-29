@@ -9,7 +9,7 @@ function WeatherHead(props) {
     <div className={props.displayComponent ? "weather-card-wrapper display" :  "weather-card-wrapper"}>
     {props.error && <div role="alert" className="error">{props.error}</div>}
     {props.incorrectCountryNameError && <div role="alert" className="error">{props.incorrectCountryNameError}</div>}
-    <div className={(!props.error && !props.incorrectCountryNameError && props.country) ? "weather-card display" :  "weather-card"}>
+    <div className={(!props.error && !props.incorrectCountryNameError && props.country && props.temperature && props.city) ? "weather-card display" :  "weather-card"}>
         <div className="weather-head">
           {props.city && props.country && props.temperature &&
             <div className="data-main">

@@ -168,7 +168,8 @@ class Weather extends Component {
 
   render() {
     return (
-      <div className="weather">
+      <div className="weather" id="weather">
+      <div className="weather-wrapper-all">
         <div className="search-head">
           <header role="banner" className="title">
             <img src="assets/Circle-icons-weather.svg" alt="" />
@@ -196,6 +197,7 @@ class Weather extends Component {
           incorrectCountryNameError={this.state.incorrectCountryNameError}
           displayComponent={this.state.displayComponent}
         />
+      </div>
       </div>
     );
   }

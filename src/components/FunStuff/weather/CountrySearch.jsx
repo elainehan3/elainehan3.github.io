@@ -7,13 +7,13 @@ class CountrySearch extends Component {
     render() {
         //console.log('DataList render');        
         return(
-            <div className="form-row">
+            <div className="search-row">
                 <label hidden htmlFor="countries">Select a country</label>
                 <input 
                     aria-label="Search by country name"
                     aria-required="true"
                     placeholder="Search country name"
-                    className="form-text" 
+                    className="search-text" 
                     list="countries" 
                     id="mycountries" 
                     name="mycountries"

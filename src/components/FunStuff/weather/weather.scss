@@ -6,25 +6,40 @@ $textColor: #4F5D73;
 $accentTextColor: rgb(114, 126, 142);
 
 .weather {
-  text-align: center;
+  // text-align: center;
   display: flex;
   flex-wrap: wrap;
   background: $weatherBack;
   padding: 40px 0;
   color: $textColor;
+   align-items: center;
+   justify-content: center;
+   overflow-x: hidden;
+  // @media (max-width: 920px) {
+  //   flex-direction: column;
+  //   align-items: center;
+  // }
+}
+.weather-wrapper-all {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  color: $textColor;
   align-items: center;
   justify-content: center;
-  overflow-x: hidden;
+  transition: all 1s ease;
   @media (max-width: 920px) {
     flex-direction: column;
     align-items: center;
   }
+
 }
 
 .search-head {
   display: flex;
   flex-direction: column;
   margin: 0 30px;
+  transition: all 1s ease;
 }
 
 .title {
@@ -52,9 +67,8 @@ $accentTextColor: rgb(114, 126, 142);
 }
 
 /* start Form */
-.form-container {
+.search-container {
   //margin: auto;
-  justify-self: center;
   justify-content: center;
 }
 
@@ -68,12 +82,12 @@ $accentTextColor: rgb(114, 126, 142);
   width: 100%;
 }
 
-.form-container .form-row {
+.search-container .search-row {
   width: 100%;
   margin: 10px 0;
 }
 
-.form-container .form-text {
+.search-container .search-text {
   width: 200px;
   padding: 0 25px;
   display: inline-block;
@@ -86,7 +100,7 @@ $accentTextColor: rgb(114, 126, 142);
   }
 }
 
-.form-container .sub-btn {
+.search-container .getw-btn {
   width: 200px;
   height: 45px;
   padding: 0 25px;
@@ -99,10 +113,20 @@ $accentTextColor: rgb(114, 126, 142);
   margin: 5px auto;
   cursor: pointer;
   &:hover {
-    box-shadow: 0px 0px 15px -8px $darkColor;
+    box-shadow: 0px 0px 15px -8px black;
     transition: all .5s ease;
     //transform: scale(1.05);
   }
+}
+
+.weather-card-wrapper {
+  display:flex;
+  position: relative;
+  right: -100vw;
+}
+.weather-card-wrapper.display {
+  display: flex;
+  right: 0;
 }
 
 .weather-card {
@@ -186,7 +210,7 @@ $accentTextColor: rgb(114, 126, 142);
 
 .weather-details {
   width: 80%;
-  padding: 20px;
+  padding: 0 20px;
   margin: 0 auto;
   text-align: left;
   display: flex;

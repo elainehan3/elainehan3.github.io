@@ -28,22 +28,24 @@
   flex-direction: column;
   width: 90%;
   display: flex;
-  margin: auto;
+  //margin: auto;
   overflow: hidden;
 }
 .img-back-cont {
   width: 100%;
-  max-height: 400px;
+  height: 400px;
   overflow: hidden;
 }
 .back {
-  z-index: 0;
   width: 100%;
-  height: auto;
+  height: 400px;
+  object-fit: cover;
+  z-index: 0;
 }
 .needle-wrapper {
   justify-content: center;
-  width: 100px;
+  width: 45px;
+  padding: 2px;
   z-index: 1;
   display: flex;
   flex-wrap: wrap;
@@ -51,30 +53,43 @@
   cursor: pointer;
   transition: opacity 0.5s ease;
   color: white;
+  border-radius: 5px;
+}
+.needle-wrapper.found {
+  background-color: rgba(226, 224, 205, 0.774);
 }
 .needle {
   z-index: 1;
   opacity: 0.5;
   width: 40px;
 }
-.needle-wrapper .foundDis {
-  background-color: yellowgreen;
-  display: flex;
+.findneedle .foundDis {
+  display: none;
+}
+.findneedle .foundDis.display {
+  align-self: center;
+  justify-self: center;
+  width: 100px;
+  position: relative;
+  top: -300px;
+  //left: 42%;
+  z-index: 2;
+  display: inline-block;
+  background-color: rgba(212, 211, 145, 0.774);
   flex-direction: column;
   align-items: center;
-  margin-top: 5px;
-  padding: 5px;
+  margin-top: 10px;
+  padding: 10px;
   border-radius: 10px;
 }
 
-.findneedle .needle-wrapper button {
-  color: white;
+.findneedle .gameBox button {
   width: 100px;
   border: none;
   display: flex;
   text-align: center;
   justify-content: center;
-  background: rgb(231, 190, 23);
+  background: rgb(218, 203, 70);
   padding: 12px;
   border-radius: 10px;
   cursor: pointer;
@@ -85,8 +100,9 @@
   // -moz-user-select: none;
   // -ms-user-select: none;
   // user-select: none;
-  :hover {
-    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.15);
+  &:hover {
+    box-shadow: 0px 0px 15px -8px white;
+    transition: all .5s ease;
   }
   font-weight: 500;
   text-decoration: none;
