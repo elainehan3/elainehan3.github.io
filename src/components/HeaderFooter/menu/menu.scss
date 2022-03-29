@@ -16,7 +16,7 @@
 
   &.active {
     right: 0;
-    Link {
+    a {
       font-size: inherit;
       color: $lightColor;
       text-decoration: none;
@@ -42,7 +42,7 @@
     color: $lightColor;
     text-decoration: none;
   }
-  Link:hover, a:hover{
+Link:hover, a:hover{
     text-decoration: underline;
   }
 }
