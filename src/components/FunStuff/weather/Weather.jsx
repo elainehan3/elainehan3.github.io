@@ -206,14 +206,16 @@ class Weather extends Component {
     // console.log('App render');
     return (
       <div className="weather">
-        <header role="banner" className="title">
-          <img src="assets/Circle-icons-weather.svg" alt="" />
-          <h1>Weather</h1>
-        </header>
-        <Searches
-          onSubmit={this.getLocations}
-          countryList={this.state.countryList}
-        />
+        <div className="search-head">
+          <header role="banner" className="title">
+            <img src="assets/Circle-icons-weather.svg" alt="" />
+            <h1>Weather</h1>
+          </header>
+          <Searches
+            onSubmit={this.getLocations}
+            countryList={this.state.countryList}
+          />
+        </div>
         <WeatherHead
           city={this.state.city}
           country={this.state.country}
