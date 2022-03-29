@@ -1,0 +1,96 @@
+@import "../../../global.scss";
+
+.findneedle {
+  background-color: rgb(226, 224, 205);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  text-align: center;
+  align-items: center;
+}
+
+.needleHead {
+  margin: 20px 0;
+  .descr {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .icon {
+    height: 40px;
+    margin: 0 10px;
+  }
+}
+.gameBox {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  display: flex;
+  margin: auto;
+  overflow: hidden;
+}
+.img-back-cont {
+  width: 100%;
+  max-height: 400px;
+  overflow: hidden;
+}
+.back {
+  z-index: 0;
+  width: 100%;
+  height: auto;
+}
+.needle-wrapper {
+  justify-content: center;
+  width: 100px;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  cursor: pointer;
+  transition: opacity 0.5s ease;
+  color: white;
+}
+.needle {
+  z-index: 1;
+  opacity: 0.5;
+  width: 40px;
+}
+.needle-wrapper .foundDis {
+  background-color: yellowgreen;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5px;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.findneedle .needle-wrapper button {
+  color: white;
+  width: 100px;
+  border: none;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  background: rgb(231, 190, 23);
+  padding: 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  //transition: all 0.12s ease-in-out;
+  // -webkit-touch-callout: none;
+  // -webkit-user-select: none;
+  // -khtml-user-select: none;
+  // -moz-user-select: none;
+  // -ms-user-select: none;
+  // user-select: none;
+  :hover {
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.15);
+  }
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 14px;
+  margin-top: 10px;
+  //margin-top: 285px;
+}

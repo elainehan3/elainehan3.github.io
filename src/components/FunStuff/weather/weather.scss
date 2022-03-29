@@ -13,6 +13,8 @@ $accentTextColor: rgb(114, 126, 142);
   padding: 40px 0;
   color: $textColor;
   align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
   @media (max-width: 920px) {
     flex-direction: column;
     align-items: center;
@@ -26,7 +28,7 @@ $accentTextColor: rgb(114, 126, 142);
 }
 
 .title {
-  justify-self: center;
+  transition: all 1s ease;
   justify-content: center;
   width: 300px;
   img {
@@ -40,7 +42,12 @@ $accentTextColor: rgb(114, 126, 142);
   @include mobile {
     margin-left: 5px;
     margin-right: 5px;
-    margin-bottom: 0;
+  }
+  .descrip {
+    display: inline-block;
+    width: 100%;
+    color: $accentTextColor;
+    font-size: 17px;
   }
 }
 
@@ -52,9 +59,8 @@ $accentTextColor: rgb(114, 126, 142);
 }
 
 .form {
-  padding: 30px 0;
+  padding: 15px 0;
   display: flex;
-  flex-direction: column;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -80,13 +86,6 @@ $accentTextColor: rgb(114, 126, 142);
   }
 }
 
-// .form-container .form-row .required-style {
-//   display: inline-block;
-//   color: #ffd42a;
-//   font-size: 17px;
-//   padding-right: 4px;
-// }
-
 .form-container .sub-btn {
   width: 200px;
   height: 45px;
@@ -111,25 +110,27 @@ $accentTextColor: rgb(114, 126, 142);
   display:flex;
   position: relative;
   right: -100vw;
-  transition: all 1s ease;
   flex-direction: row;
   align-items: center;
   background-color: $weatherC;
   color: $textColor;
-  padding: 30px;
-  margin-top: 40px;
-  border-radius: 25px;
-  box-shadow: 0px 0px 15px -8px $darkColor;
   @media (max-width: 600px) {
     flex-direction: column;
-    padding: 30px 10px;
-    width: 80%;
   }
 }
 .weather-card.display {
   right: 0;
-
+  margin: 15px 0;
+  padding: 30px;
+  border-radius: 25px;
+  box-shadow: 0px 0px 15px -8px $darkColor;
+  transition: right 1s ease;
+  @media (max-width: 600px) {
+    padding: 30px 10px;
+    width: 80vw;
+  }
 }
+
 
 /* Start WeatherHead */
 .weather-head {
@@ -144,6 +145,11 @@ $accentTextColor: rgb(114, 126, 142);
   justify-content: center;
   align-items: baseline;
   padding: 20px 5px;
+  // .when {
+  //   font-size: 17px;
+  //   color: $accentTextColor;
+  //   margin-bottom: 10px;
+  // }
   .location {
     font-size: 25px;
     font-weight: bold;
@@ -183,7 +189,6 @@ $accentTextColor: rgb(114, 126, 142);
   padding: 20px;
   margin: 0 auto;
   text-align: left;
-  color: $textColor;
   display: flex;
 }
 

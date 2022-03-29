@@ -2,9 +2,7 @@ import React, { Component } from 'react';
 import './weather.scss';
 import Searches from './Searches';
 import WeatherHead from './WeatherHead';
-//import WeatherDisplay from './WeatherDisplay';
 import countries from './countriesData.js';
-//import WbSunnyIcon from '@mui/icons-material/WbSunny';
 
 const API_KEY = "74d3b7a9d1bc8381ecd9eb2acf28fc56";
 
@@ -29,16 +27,11 @@ class Weather extends Component {
     countryList: []
   }
 
-  //to get location from <Form /> (user inputs)
   getLocations = (city, country, countryNameError) => {
-    //handle case: if user enter correct country value
     if (country) {
-      // update location state due to user inputs
       this.setState({
         cityInput: city, countryInput: country
       });
-      //handle case: if user enter incorrect country value
-      //UX: add error message
     } else {
       //console.log('no matching country')
       this.setState({
@@ -54,35 +47,23 @@ class Weather extends Component {
         wind: [undefined, undefined],
       });
     }
-    // handle case: that blind user enter another incorrect country input
-    // A11y: to get message read another time
+    // get message read another time
     //this.delayState();
   }
 
-  // to delay hiding incorrectCountryNameError
-  // A11y: to get message read another time 
-  delayState = function () {
-    setTimeout(() => {
-      this.setState({ incorrectCountryNameError: undefined });
-    }, 3000);
-  }
+  // delayState = function () {
+  //   setTimeout(() => {
+  //     this.setState({ incorrectCountryNameError: undefined });
+  //   }, 3000);
+  // }
 
-  // use - async await - approche to fetch data from openweathermap API
-  // add async before our function
   fetchWeather = async (city, country) => {
     try {
-      // add await before make a call
       const api_call = await fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city},${country}&units=metric&APPID=${API_KEY}`);
-
-      // handle response using json() method to turn response into JSON
       const response = await api_call.json();
-      //console.log(response);
-      //console.log(city, country);
-      //console.log(response.cod);
 
-      // handle case: data is fecthed correctly
+      // data is fetched correctly
       if (response.cod === "200") {
-        // update weather state after fetching data
         this.setState({
           city: response.city.name,
           country: response.city.country,
@@ -99,13 +80,10 @@ class Weather extends Component {
           incorrectCountryNameError: undefined,
           displayComponent: true
         });
-        //console.log(response.list[0].main.humidity, this.state.humidity);
-        // handle case: user enter incorrect location
-        // simulate case: enter wrong locations
-        //UX: add error message
+        // incorrect location
       } else if (response.cod === "404") {
         this.setState({
-          error: `!Error: ${response.message}, please check location inputs again`,
+          error: `Error: ${response.message}, please check input city name`,
           incorrectCountryNameError: undefined,
           cityInput: undefined,
           countryInput: undefined,
@@ -120,12 +98,10 @@ class Weather extends Component {
         });
 
       } else {
-        // handle case: if invalid API openweathermap key (Unauthorized error)
-        // if (response.cod === "401")
-        // simulate case: delete from API key
-        //UX: add error message
+        // invalid API openweathermap key (Unauthorized error)
+        // response.cod === "401"
         this.setState({
-          error: `!Error: ${response.message} `,
+          error: `Error: ${response.message} `,
           incorrectCountryNameError: undefined,
           cityInput: undefined,
           countryInput: undefined,
@@ -141,10 +117,8 @@ class Weather extends Component {
 
       }
 
-      //handle case: if fetch request fails due to network issues or fetched url incorrect
+      // fetch request fails due to network issues or fetched url incorrect
       // User is offline, DNS troubles, network errors
-      // simulate case: disconnect internet or delete anything from fetched url
-      //UX: add error message
     } catch (error) {
       this.setState({
         cityInput: undefined,
@@ -157,7 +131,7 @@ class Weather extends Component {
         icon: undefined,
         wind: [undefined, undefined],
         displayComponent: true,
-        error: `!Error: something went wrong with network`,
+        error: `Network error`,
         incorrectCountryNameError: undefined
       });
     }
@@ -170,20 +144,18 @@ class Weather extends Component {
       () => console.log(this.state.countryList));
   }
 
-  // adding prevProps parameter corrected the multiple call issue
   componentDidUpdate(prevProps, prevState) {
 
 
     //console.log('App componentDidUpdate', this.state.incorrectCountryNameError, this.state.displayComponent);
     //console.log(this.state.cityInput, this.state.countryInput);
     //check value countryInput != undefined to make network request
-    //a network request may not be necessary if the state (locations user enterd) have not changed
+    //a network request may not be necessary if the state have not changed
     //console.log(prevState.cityInput, prevState.countryInput);
     if ((this.state.cityInput !== prevState.cityInput || this.state.countryInput !== prevState.countryInput) && this.state.countryInput !== undefined) {
       //console.log('yes fetch', this.state.cityInput, prevState.cityInput);
       //console.log(this.state.countryInput, prevState.countryInput);
-      // handle case: that blind user enter another incorrect input
-      // A11y: to get message read another time
+      // another incorrect input
       if (this.state.error) {
         this.setState({ error: undefined });
       }
@@ -191,25 +163,17 @@ class Weather extends Component {
       this.fetchWeather(this.state.cityInput, this.state.countryInput);
 
     }
-    // else if ((this.state.cityInput !== prevState.cityInput || this.state.countryInput !== prevState.countryInput) && this.state.countryInput === undefined) {
-    //   if(!this.state.displayComponent) {
-    //     this.setState({displayComponent: true});
-    //   } else {
-    //     this.setState({displayComponent: false});
-    //   }
-    // }
-
   }
 
 
   render() {
-    // console.log('App render');
     return (
       <div className="weather">
         <div className="search-head">
           <header role="banner" className="title">
             <img src="assets/Circle-icons-weather.svg" alt="" />
             <h1>Weather</h1>
+            <span className="descrip">Get current weather for any city!</span>
           </header>
           <Searches
             onSubmit={this.getLocations}

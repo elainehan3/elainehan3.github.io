@@ -1,19 +1,14 @@
 import React, {Component} from 'react';
 
-class DataList extends Component {
-
+class CountrySearch extends Component {
     componentDidMount() {
         //console.log('DataList componentDidMount');        
     }
-
     render() {
         //console.log('DataList render');        
-
         return(
             <div className="form-row">
-                <label hidden htmlFor="countries">Choose a country</label>
-                {/* <span className="required-style">* </span> */}
-                {/* input field of datalist holds the option that is selected in the datalist */}
+                <label hidden htmlFor="countries">Select a country</label>
                 <input 
                     aria-label="Search by country name"
                     aria-required="true"
@@ -31,4 +26,4 @@ class DataList extends Component {
     }
 }
 
-export default DataList;
+export default CountrySearch;
