@@ -1,0 +1,71 @@
+.textAndPicture {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  .text-picture-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 40px;
+    width: fit-content;
+    padding: 0 30px;
+    @include mobile {
+      flex-direction: column;
+      row-gap: 30px;
+    }
+    .left {
+      display: flex;
+      width: 30vw;
+      justify-content: center;
+      align-items: flex-center;
+      max-height: 400px;
+      @include mobile {
+        width: 100%;
+      }
+      .img-box {
+        display: flex;
+        align-items: flex-end;
+        max-height: 400px;
+        width: 600px;
+        overflow-y: hidden;
+        @include mobile {
+          width: 100%;
+        }
+        img {
+          width: 100%;
+        }
+      }
+    }
+    .right {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: left;
+      row-gap: 20px;
+      @include mobile {
+        width: unset;
+      }
+      .horizList {
+        flex-direction: row;
+      }
+      .links {
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        column-gap: 20px;
+        .icon {
+          font-size: 30px;
+        }
+        a {
+          //font-size: 30px;
+          text-decoration: none;
+          color: $topBarLinkColor;
+          //margin: 0 10px;
+        }
+        a:hover {
+          color: $linkHColor;
+        }
+      }
+    }
+  }
+}

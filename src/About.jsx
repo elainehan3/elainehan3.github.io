@@ -1,13 +1,13 @@
-import AboutMe from './components/AboutPage/aboutLarge/AboutLarge'
-import Gallery from './components/AboutPage/gallery/Gallery'
+import AboutMe from './pages/AboutPage/aboutLarge/AboutLarge'
+import Tabs from './pages/AboutPage/tabs/Tabs'
 import './page.scss'
 
 function About() {
   return (
      <div className="page">
-      <div className="sections">
+      <div className="page-sections">
         <AboutMe/>
-        <Gallery/>
+        <Tabs/>
       </div>
     </div>
   );

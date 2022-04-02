@@ -3,21 +3,38 @@
 .page {
   width: 100%;
   background: $lightColor;
-  .sections {
+  .page-sections {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
     //height: $pageHeight;
     //position: relative;
     //top: $topBarHeight;
-    scroll-behavior: smooth;
-    scroll-snap-type: y mandatory;
-    scrollbar-width: none; //for firefox
-    &::webkit-scrollbar{
-      display: none;
-    }
+
+    // scroll-behavior: smooth;
+    // scroll-snap-type: y mandatory;
+    // scrollbar-width: none; //for firefox
+    // &::webkit-scrollbar{
+    //   display: none;
+    // }
+    padding-top: 30px;
+    row-gap: 30px;
 
     > * {
-      width: 100vw;
+      width: 100%;
       //height: $pageHeight;
-      scroll-snap-align: start; 
+      //scroll-snap-align: start; 
+    }
+  }
+  .no-space-sections {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    > * {
+      width: 100%;
+      padding: 30px 0;
+      //height: $pageHeight;
+      //scroll-snap-align: start; 
     }
   }
 }

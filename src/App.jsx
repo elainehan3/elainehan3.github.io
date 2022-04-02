@@ -8,24 +8,36 @@ import Home from './Home';
 import About from './About';
 import ProjectPage from './ProjectPage';
 import FunStuff from './FunStuff';
+import ResumePage from './ResumePage';
 
 function App() {
-  const [menuOpen,setMenuOpen] = useState(false)
+  const [menuOpen, setMenuOpen] = useState(false)
+  // // only for building resume
+  // if (location.pathname === "/resumeonly") {
+  //   return (
+  //     <div className="app">
+  //       <ResumeOnly />
+  //     </div>
+  //   );
+  // } else {
+  // //erase above in commit
   return (
     <div className="app">
-      <Topbar menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
-      <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
-      <div className='sections'>
-         <Routes> 
+      <Topbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+      <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+      <div className="sections">
+        <Routes>
           <Route exact path='/' element={<Home />}></Route>
           <Route exact path='/about' element={<About />}></Route>
           <Route exact path='/projects' element={<ProjectPage />}></Route>
           <Route exact path='/fun' element={<FunStuff />}></Route>
-        </Routes>  
-        <Contact/>
+          <Route exact path='/resume' element={<ResumePage />}></Route>
+        </Routes>
+        <Contact />
       </div>
     </div>
   );
 }
 
 export default App;
+

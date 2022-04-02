@@ -1,0 +1,15 @@
+@import "../../../global.scss";
+
+.projectAcc {
+  background-color: $background2Color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  row-gap: 30px;
+  padding-bottom: 30px;
+  h1 {
+    color: $darkColor;
+  }
+}

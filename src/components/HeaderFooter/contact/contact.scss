@@ -3,128 +3,30 @@
 .contact {
   background-color: $background2Color;
   display: flex;
-  //padding-top: $topBottomPadding;
-  //padding-bottom: $topBottomPadding;
-  overflow-x: hidden;
-  margin-top: 50px;
-
-  @include mobile {
-    flex-direction: column;
-    align-items: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 0;
+  p {
+    color: $mainColor;
+    font-size: 12px;
   }
-
-  .left {
-    flex: 1;
-    overflow: hidden;
-    img {
-      height: 100%;
-      @include mobile {
-        height: 150px;
-      }
-    }
-  }
-  .right {
-    flex: 1;
-    z-index: 5;
+  .links {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
-    padding-bottom: $topBottomPadding;
-
-    h2 {
+    .icon {
       font-size: 30px;
-      margin: 20px;
     }
-
-    .links {
-      display: flex;
-      flex-direction: row;
-      margin: 20px;
-      align-items: center;
-      .icon {
-        font-size: 40px;
-        margin: 0 10px;
-      }
-      a {
-        font-size: 30px;
-        text-decoration: none;
-        color: $topBarLinkColor;
-        //margin: 0 10px;
-      }
-      a:hover {
-        color: $linkColor;
-      }
+    a {
+      font-size: 30px;
+      text-decoration: none;
+      color: $topBarLinkColor;
+      margin: 0 10px;
     }
-
-    form {
-      width: 70%;
-      height: 70%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-
-      input {
-        width: 300px;
-        height: 30px;
-        font-size: 14px;
-        margin-bottom: 20px;
-        @include mobile {
-          width: 80vw;
-          height: 20px;
-        }
-      }
-
-      textarea {
-        width: 300px;
-        height: 200px;
-        font-size: 14px;
-        margin-bottom: 20px;
-        @include mobile {
-          width: 80vw;
-          height: 100px;
-        }
-      }
-
-      button {
-        width: 150px;
-        height: 40px;
-        color: $lightColor;
-        background-color: $accent1Color;
-        border: none;
-        border-radius: 10px;
-        font-weight: 500;
-        cursor: pointer;
-
-        &:focus {
-          outline: none;
-        }
-      }
-      span {
-        color: green;
-      }
-    }
-  }
-  .imgContainer {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background-color: rgb(245, 179, 155);
-    display: none;
-    align-items: center;
-    justify-content: center;
-    margin-right: 10px;
-    @include mobile {
-      display: flex;
-      width: 20px;
-      height: 20px;
-    }
-    img {
-      width: 30px;
-      border-radius: 50%;
-      @include mobile {
-        width: 20px;
-      }
+    a:hover {
+      color: $linkHColor;
     }
   }
 }

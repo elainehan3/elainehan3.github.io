@@ -1,16 +1,20 @@
 import './page.scss'
-import Weather from './components/FunStuff/weather/Weather';
-import FSHeader from './components/FunStuff/fsheader/FSHeader';
-import FindNeedle from './components/FunStuff/findNeedle/FindNeedle';
+import Weather from './pages/FunStuff/weather/Weather';
+import FindNeedle from './pages/FunStuff/findNeedle/FindNeedle';
 
 function FunStuff() {
   return (
-     <div className="page">
-     <div className="sections">
-      <FSHeader/>
-      <Weather/>
-      <FindNeedle/>
-     </div>
+    <div className="page">
+      <div className="page-sections">
+        <div className="textSection">
+          <h1>Fun Projects</h1>
+          <div className="divider">_________________________________________</div>
+        </div>
+        <div className='no-space-sections'>
+          <Weather />
+          <FindNeedle />
+        </div>
+      </div>
     </div>
   );
 }

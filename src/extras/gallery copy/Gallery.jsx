@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import GalleryList from "../galleryList/GalleryList";
-import "./gallery.scss";
+import GalleryList from "../tabsList/GalleryList";
+import "./tabs.scss";
 import {
   firstGallery,
   secondGallery,
@@ -33,7 +33,7 @@ export default function Gallery() {
   }, [selected]);
 
   return (
-    <div className="gallery" id="gallery">
+    <div className="tabs" id="tabs">
       <div className="categories">
         {categories.map((item) => (
           <GalleryList

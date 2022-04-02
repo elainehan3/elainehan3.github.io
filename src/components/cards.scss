@@ -1,0 +1,106 @@
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 20px;
+  h2, h3, h4, h5 {
+    font-weight: 400;
+    text-transform: unset;
+  }
+  .container {
+    width: 100%;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    .item {
+      width: 700px;
+      display: flex;
+      overflow: hidden;
+      @include mobile {
+        width: 80vw;
+      }
+      .left {
+        flex: 8;
+        display: flex;
+        align-items: center;
+        .leftContainer {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+
+            .imgContainer {
+              width: 40px;
+              height: 40px;
+              border-radius: 50%;
+              //background-color: rgb(245, 179, 155);
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              @include mobile {
+                width: 20px;
+                height: 20px;
+              }
+              img {
+                width: 25px;
+                @include mobile {
+                  width: 15px;
+                }
+              }
+            }
+          h3 {
+            font-family: $cardHeadFont;
+            font-size: 30px;
+            //margin: 5px 0;
+            @include mobile{
+              font-size: 25px;
+            }
+          }
+          h4 {
+            font-family: $cardHeadFont;
+            font-size: 20px;
+            margin: 10px 0;
+            color: $companyColor;
+            @include mobile{
+              font-size: 15px;
+            }
+          }
+          h5 {
+            font-family: $cardHeadFont;
+            font-size: 18px;
+            margin-bottom: 5px;
+            @include mobile{
+              margin-bottom: 0;
+              font-size: 13px;
+            }
+          }
+          p {
+            //font-size: 18px;
+          }
+          span {
+            font-size: 12px;
+            font-weight: 500;
+            text-decoration: underline;
+            cursor: pointer;
+          }
+        }
+      }
+      .right {
+        flex: 4;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        max-height: 200px;
+        img {
+          width: 100%;
+          object-fit: cover;
+        }
+        @include mobile {
+          display: none;
+        }
+      }
+    }
+  }
+}

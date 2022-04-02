@@ -1,0 +1,122 @@
+@import "../../../global.scss";
+
+.intro {
+  background-color: $lightColor;
+  display: flex;
+  height: $pageHeight;
+  min-height: 400px;
+  max-height: 650px;
+  overflow: hidden;
+  @include mobile {
+    height: 500px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .left {
+    flex: 5;
+    overflow: hidden;
+    transition: flex 1s ease;
+    @media (max-width: 900px) {
+      flex: 4;
+    }
+    .imgContainer {
+      width: 60vw;
+      height: 60vw;
+      min-width: 700px;
+      min-height: 700px;
+      background-color: $circleColor;
+      border-radius: 50%;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      float: right;
+      @include mobile{
+        border-radius: 0;
+        align-items: flex-start;
+      }
+      img {
+        height: 90%;
+        @include mobile{
+          height: 50%;
+        }
+      }
+    }
+  }
+  .right {
+    display: flex;
+    flex: 5;
+    position: relative;
+    align-items: center;
+    @include mobile{
+      flex: 5;
+    }
+    .wrapper {
+      width: 100%;
+      //height: 100%;
+      padding-left: 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      @include mobile{
+        padding-left: 0;
+        align-items: center;
+      }
+      .l1 {
+        font-weight: 300;
+        font-size: 80px;
+        @include mobile{
+          font-size: 50px;
+        }
+        span {
+          font-family: $headerFonts;
+          font-size: inherit;
+          color: $flowerMainColor;
+        }
+      }
+      .l2 {
+        font-weight: 300;
+        font-size: 50px;
+        @include mobile{
+          font-size: 32px;
+        }
+        span {
+          font-family: $headerFonts;
+        }
+      }
+      .l3 {
+        font-weight: 300;
+        font-size: 40px;
+        .ityped-cursor {
+          animation: blink 1s infinite;
+        }
+        span {
+          font-family: $headerFonts;
+        }
+        @keyframes blink {
+            50%{opacity: 1;}
+            100%{opacity: 0;}
+        }
+        @include mobile{
+          font-size: 27px;
+        }
+      }
+    }
+    a {
+      position: relative;
+      bottom: 30px;
+      @include mobile{
+        //bottom: 30px;
+      }
+      img {
+        width: 30px;
+        animation: arrowBlink 2s infinite;
+      }
+      @keyframes arrowBlink {
+        100% {
+          opacity: 0;
+        }
+      }
+    }
+  }
+}

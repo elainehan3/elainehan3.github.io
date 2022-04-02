@@ -1,9 +1,9 @@
-import "./galleryList.scss";
+import "./tabsList.scss";
 
 export default function GalleryList({ id, title, active, setSelected }) {
   return (
     <li
-      className={active ? "galleryList active" : "galleryList"}
+      className={active ? "tabsList active" : "tabsList"}
       onClick={() => setSelected(id)}
     >
       {title}

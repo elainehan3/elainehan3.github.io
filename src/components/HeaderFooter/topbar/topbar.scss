@@ -7,7 +7,7 @@
   color: $mainColor;
   position: fixed;
   top: 0;
-  z-index: 3;
+  z-index: 4;
 
   .wrapper {
     padding: 10px $sidePadding;
@@ -21,11 +21,11 @@
       justify-content: center;
       .logo {
         font-family: $headerFonts;
-        font-size: 35px;
-        font-weight: bold;
+        font-size: 30px;
+        font-weight: 300;
+        text-transform: uppercase;
         text-decoration: none;
         color: inherit;
-        margin-right: 40px;
         transition: 1s;
       }
     }
@@ -44,13 +44,15 @@
           margin-right: 5px;
         }
         a {
-          font-size: 20px;
+          text-transform: uppercase;
+          font-weight: 400;
+          font-size: 16px;
           text-decoration: none;
           color: $topBarLinkColor;
           margin: 0 10px;
         }
         a:hover {
-          color: $linkColor;
+          color: $linkHColor;
         }
       }
       .hamburger {

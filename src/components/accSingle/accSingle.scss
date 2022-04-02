@@ -1,0 +1,140 @@
+@import "../../global.scss";
+
+.accSingle {
+  width: 700px;
+  font-size: 14px;
+  cursor: pointer;
+  align-content: center;
+  justify-content: center;
+  @include mobile{
+    width: 80%;
+  }
+  &:hover {
+    box-shadow: 0px 0px 15px -8px $darkColor;
+    transition: all .5s ease;
+    transform: scale(1.05);
+  }
+  h3, h4, h5 {
+    font-weight: 500;
+  }
+  .item {
+  border-radius: 10px;
+  background-color: $lightColor;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex-direction: column;
+  transition: all .5s ease;
+  cursor: pointer;
+    .visible {
+      display: flex;
+      height: 175px;
+      flex-direction: row;
+      .left {
+        display: flex;
+        flex: 5;
+        align-items: center;
+        justify-content: flex-start;
+        padding-left: 20px;
+        padding-right: 15px;
+        .leftContainer {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          row-gap: 15px;
+          h3 {
+            font-family: $cardHeadFont;
+          }
+          h4 {
+            font-family: $cardHeadFont;
+            color: $techColor;
+            @include mobile{
+              font-size: 15px;
+            }
+          }
+          h5 {
+            font-family: $cardHeadFont;
+            @include mobile{
+              font-size: 14px;
+            }
+          }
+          span {
+            font-size: 14px;
+            font-weight: 600;
+            text-decoration: underline;
+            cursor: pointer;
+          }
+        }
+      }
+      .right {
+        flex: 6;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        overflow: hidden;
+        .img-box {
+          display: flex;
+          overflow: hidden;
+          height: 100%;
+          width: 100%;
+          align-items: flex-start;
+          justify-content: flex-start;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+        
+        .sign {
+          z-index: 1;
+          position: absolute;
+          margin: 20px;
+          //right: 20px;
+          @include mobile{
+            width: 20px;
+          }
+          img {
+            transition: transform .5s ease;
+            color: $darkColor;
+            width: 30px;
+            @include mobile{
+              width: 20px;
+            }
+
+          }
+
+        }
+      }
+    }
+    .descrip {
+      //position: relative;
+      display: none;
+      padding: 20px;
+      flex-direction: column;
+      row-gap: 10px;
+      align-self: flex-start;
+    }
+  }
+}
+.accSingle.active {
+  transform: scale(1.05);
+  box-shadow: 0px 0px 15px -8px $darkColor;
+  .item {
+    .visible {
+      .right {
+        .sign {
+          img {
+            //transition: all .5s ease;
+            transform: rotate(180deg);
+          }
+        }
+      }
+    }
+    .descrip {
+      display: flex;
+    }
+  }
+}
+

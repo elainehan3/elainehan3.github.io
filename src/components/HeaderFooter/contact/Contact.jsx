@@ -1,33 +1,17 @@
 //import { useState } from "react";
 import "./contact.scss";
-import { Mail, LinkedIn } from "@mui/icons-material";
+import { Mail, LinkedIn, GitHub } from "@mui/icons-material";
+import { header } from "../../../data/resumeData";
 
 export default function Contact() {
-  // const [message, setMessage] = useState(false);
-
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   setMessage(true);
-  // };
-   return (
+  return (
     <div className="contact" id="contact">
-      {/* <div className="left">
-        <img src="assets/shake.svg" alt="" />
-      </div> */}
-      <div className="right">
-      {/*<h2>Contact</h2>*/}
-        <div className="links">
-          <h2>Get In Touch!</h2>
-          <a href="mailto:elaine.han@uwaterloo.ca"><Mail className="icon" /></a>
-          <a href="https://www.linkedin.com/in/elainehan3/" ><LinkedIn className="icon" /></a>
-        </div>
-        {/* <form onSubmit={handleSubmit}>
-          <input type="text" placeholder="Email" />
-          <textarea placeholder="Message"></textarea>
-          <button type="submit">Send</button>
-          {message && <span>Thanks, I'll reply ASAP :)</span>}
-        </form> */}
+      <div className="links">
+        <a href={header.emailLink}><Mail className="icon" /></a>
+        <a href={header.linkedInLink}><LinkedIn className="icon" /></a>
+        <a href={header.githubLink}><GitHub className="icon" /></a>
       </div>
+      <p>built with ♥ by elaine han</p>
     </div>
   );
 }

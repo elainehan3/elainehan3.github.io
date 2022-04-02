@@ -1,6 +1,7 @@
 @import "../../../global.scss";
 
 .menu {
+  display: flex;
   width: 100vw;
   height: 100vh;
   background-color: $mainTranspColor;
@@ -8,12 +9,10 @@
   top: 0;
   right: -100vw;
   z-index: 3;
-  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   transition: all 1s ease;
-
   &.active {
     right: 0;
   }
@@ -22,22 +21,20 @@
     margin: 0;
     padding: 0;
     list-style: none;
-    font-size: 40px;
-    font-weight: bold;
-    color: $lightColor;
+    font-size: 30px;
+    font-weight: 400;
+    text-transform: uppercase;
     width: 60%;
+    line-height: 200%;
     text-align: center;
-
-    li {
-      margin-bottom: 25px;
-    }
   }
   Link, a {
-    font-size: inherit;
+    font-size: 25px;
     color: $lightColor;
     text-decoration: none;
   }
 Link:hover, a:hover{
+    color: $lightColor;
     text-decoration: underline;
   }
 }
