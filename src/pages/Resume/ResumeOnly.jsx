@@ -26,7 +26,7 @@ export default class ResumeOnly extends React.PureComponent {
                 </div>
                 <div className="contact-and-icon">
                   <Language className="icon" />
-                  <a href={rdata.header.site}><h5>{rdata.header.site}</h5></a>
+                  <a href={rdata.header.siteLink}><h5>{rdata.header.site}</h5></a>
                 </div>
               </div>
             </div>

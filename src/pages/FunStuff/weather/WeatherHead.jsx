@@ -5,13 +5,14 @@ import OpacityIcon from '@mui/icons-material/Opacity';
 import CompressIcon from '@mui/icons-material/Compress';
 
 function WeatherHead(props) {
+  console.log (props)
   return (
     <div className={props.displayComponent ? "weather-card-wrapper display" :  "weather-card-wrapper"}>
     {props.error && <div role="alert" className="error">{props.error}</div>}
     {props.badCountryNameError && <div role="alert" className="error">{props.badCountryNameError}</div>}
-    <div className={(!props.error && !props.badCountryNameError && props.country && props.temperature && props.city) ? "weather-card display" :  "weather-card"}>
+    <div className={(!props.error && !props.badCountryNameError && props.city) ? "weather-card display" :  "weather-card"}>
         <div className="weather-head">
-          {props.city && props.country && props.temperature &&
+          {props.city && props.country && 
             <div className="data-main">
               <p className="location"> {props.city}, {props.country}</p>
               <div className="temp-container">
@@ -23,7 +24,7 @@ function WeatherHead(props) {
           }
         </div>
         <div className="weather-details">
-          {props.humidity && props.condition && props.wind[0] && props.wind[1] &&
+          {props.condition && 
             <div>
               <p className="weather-stat"><AirIcon className="icon" /><span className="stat-title">Wind:</span> {props.wind[0]} km/h</p>
               <p className="weather-stat"><OpacityIcon className="icon" /><span className="stat-title">Humidity:</span> {props.humidity} %</p>

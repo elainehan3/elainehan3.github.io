@@ -100,10 +100,11 @@ li {
   border-color: #741b47;
 }
 .resume .header {
-  row-gap: 4px;
+  row-gap: 8px;
   display: flex;
   align-items: center;
   flex-direction: column;
+  margin-bottom: 5px;
 }
 .resume .header .contacts {
   display: flex;

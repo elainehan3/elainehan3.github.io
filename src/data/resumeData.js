@@ -5,7 +5,8 @@ export const header = {
   phone: "403-966-8805",
   linkedIn: "elainehan3",
   linkedInLink: "https://ca.linkedin.com/in/elainehan3",
-  site: "https://elainehan3.github.io",
+  site: "elainehan3.github.io",
+  siteLink: "https://elainehan3.github.io",
   github: "elainehan3",
   githubLink: "https://github.com/elainehan3",
 }

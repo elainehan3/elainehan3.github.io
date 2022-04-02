@@ -31,8 +31,7 @@
     flex-direction: column;
     width: 100%;
     > * {
-      width: 100%;
-      padding: 30px 0;
+      padding: 30px 10px;
       //height: $pageHeight;
       //scroll-snap-align: start; 
     }

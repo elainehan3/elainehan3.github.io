@@ -134,7 +134,7 @@ $accentTextColor: rgb(114, 126, 142);
 .weather-card {
   //height: fit-content;
   display:flex;
-  position: relative;
+  position: absolute;
   right: -100vw;
   flex-direction: row;
   align-items: center;
@@ -145,6 +145,7 @@ $accentTextColor: rgb(114, 126, 142);
   }
 }
 .weather-card.display {
+  position: relative;
   right: 0;
   margin: 15px 0;
   padding: 30px;

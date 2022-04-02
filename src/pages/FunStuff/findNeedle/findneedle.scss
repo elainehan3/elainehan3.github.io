@@ -6,7 +6,6 @@
   text-align: center;
   align-items: center;
   row-gap: 30px;
-  font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
 }
 
 .findneedle h2 {
@@ -26,6 +25,9 @@
     height: 90px;
     object-fit: contain;
   }
+  h2 {
+    font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
+   }
 }
 .needleHead {
   display: flex;
