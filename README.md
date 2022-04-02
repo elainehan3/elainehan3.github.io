@@ -8,9 +8,8 @@ The [Fun](http://elainehan3.github.io/#/fun) page also showcases some additional
 
 A weather web app built with React and OpenWeather API.
 
-#### Features 
-
-- **Weather forecast for any city**
+#### Features:
+- **Full weather forecast for any city**
 - **Search by city only or city and country**
 - **Search suggestions for country searching**
 
