@@ -2,7 +2,7 @@
 
 A portfolio site, and a project I used to learn React. Visit [http://elainehan3.github.io](http://elainehan3.github.io) to see it!
 
-The [http://elainehan3.github.io/#/fun](Fun) page also showcases some additional projects:
+The [Fun](http://elainehan3.github.io/#/fun) page also showcases some additional projects:
 
 ## Weather
 
