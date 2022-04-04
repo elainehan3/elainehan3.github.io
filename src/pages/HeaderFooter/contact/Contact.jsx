@@ -11,7 +11,7 @@ export default function Contact() {
         <a href={header.linkedInLink}><LinkedIn className="icon" /></a>
         <a href={header.githubLink}><GitHub className="icon" /></a>
       </div>
-      <p>built with ♥ by elaine han</p>
+      <p>created with ♥ by elaine han</p>
     </div>
   );
 }

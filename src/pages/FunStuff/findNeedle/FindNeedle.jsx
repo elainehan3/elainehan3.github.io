@@ -9,7 +9,6 @@ export default function FindNeedle() {
   const needleWidth = 45;
   const imgHeight = 700;
   const [found, setFound] = useState(false);
-  //const [showConfetti, setShowConfetti] = useState(false)
   const [showPlayAgain, setShowPlayAgain] = useState(false);
   const getRandY = (max) => {
     return needleWidth + Math.floor(Math.random() * (max - needleWidth));

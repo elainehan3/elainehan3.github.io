@@ -25,11 +25,9 @@ export default function Experience() {
                     <h4>{d.company}</h4>
                   </div>
                   <h3>{d.title}</h3>
-                  {/* <p>{<ul>
-                    {d.did.map((d) => (
-                      <li>{d}</li>
-                    ))}
-                  </ul>}</p> */}
+                    {/* {d.did.map((d) => (
+                      <p>∙ {d}</p>
+                    ))} */}
                 </div>
               </div>
             </div>

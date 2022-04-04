@@ -2,6 +2,9 @@
   display: flex;
   width: 100%;
   justify-content: center;
+  h4 {
+    color: $mainColor;
+  }
   .text-picture-container {
     display: flex;
     flex-direction: row;
@@ -25,9 +28,11 @@
       .img-box {
         display: flex;
         align-items: flex-end;
+        justify-content: center;
         max-height: 400px;
         width: 600px;
         overflow-y: hidden;
+        border-radius: 10px;
         @include mobile {
           width: 100%;
         }

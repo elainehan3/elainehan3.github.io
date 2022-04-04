@@ -2,10 +2,7 @@
 @import "../../../components/textAndPicture.scss";
 
 .aboutLarge {
-  background-color: $background2Color;
   display: flex;
-  //padding-top: $topBottomPadding;
-  //padding-bottom: $topBottomPadding;
   flex-direction: column;
   align-items: center;
   h2 {

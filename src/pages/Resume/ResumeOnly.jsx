@@ -50,33 +50,41 @@ export default class ResumeOnly extends React.PureComponent {
             <hr />
             <div className="data">
               <div className="entry">
-                <div className="plainline">
-                  <h3>{rdata.resumeSite.title}</h3><h5> | {rdata.resumeSite.techs}</h5>
-                </div>
                 <div className="line">
-                  <ul>
+                  <div className="plainline">
+                    <h3>{rdata.resumeSite.title}</h3><h5> | {rdata.resumeSite.techs}</h5>
+                  </div>
+                  <a href={rdata.resumeSite.link}><p>elainehan3.github.io</p></a>
+                </div>
+                {/* <div className="line"> */}
+                {/* <ul>
                     <li>Designed, developed, and deployed a mobile-friendly & responsive portfolio website with interactive elements</li>
                     <li>Site also hosts small projects such as:</li>
                     <ul>
                       <li><strong>Needle in a Haystack</strong> - Fully functioning and responsive i-Spy minigame</li>
                       <li><strong>Weather</strong> - Mobile-friendly and responsive weather web app using OpenWeather API</li>
                     </ul>
-                  </ul>
-                </div>
+                  </ul> */}
+                <p>∙ Designed, developed, and deployed a mobile-friendly & responsive portfolio website with interactive elements</p>
+                <p>∙ Site also hosts small projects such as:</p>
+
+                <p><strong>&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp; Needle in a Haystack</strong> - Fully functioning and responsive i-Spy minigame</p>
+                <p><strong>&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp; Weather</strong> - Mobile-friendly and responsive weather web app using OpenWeather API</p>
+
+                {/* </div> */}
               </div>
               {rdata.resumeProjects.map(p => {
                 return (
                   <div className="entry">
-                    <div className="plainline">
-                      <h3>{p.title} </h3><h5> | {p.techs}</h5>
-                    </div>
                     <div className="line">
-                      <ul>
-                        {p.did.map((d) => (
-                          <li>{d}</li>
-                        ))}
-                      </ul>
+                      <div className="plainline">
+                        <h3>{p.title}</h3><h5> | {p.techs}</h5>
+                      </div>
+                      {(p.link !== "") ? <a href={p.link}><p>{p.linkName}</p></a> : <p style={{whiteSpace:"nowrap"}}>{p.linkName}</p>}
                     </div>
+                    {p.did.map((d) => (
+                      <p>∙ {d}</p>
+                    ))}
                   </div>
                 )
               })}
@@ -90,19 +98,16 @@ export default class ResumeOnly extends React.PureComponent {
                 return (
                   <div className="entry">
                     <div className="line">
-                      <h3>{e.title}</h3>
+                      <h3>{e.title}</h3><h5> | </h5>
                     </div>
                     <div className="line">
                       <h4>{e.company}</h4>
                       <p>{e.start} - {e.end}</p>
                     </div>
-                    <div className="line">
-                      <ul>
-                        {e.did.map((d) => (
-                          <li>{d}</li>
-                        ))}
-                      </ul>
-                    </div>
+                    {e.did.map((d) => (
+                      <p>∙ {d}</p>
+                    ))}
+
                   </div>
                 )
               })}
@@ -115,20 +120,16 @@ export default class ResumeOnly extends React.PureComponent {
               {rdata.activities.map(e => {
                 return (
                   <div className="entry">
-                    <div className="line">
-                      <h3>{e.title}</h3>
-                    </div>
+                  <div className="plainline">
+                    <h3>{e.title}</h3>{(e.techs !== "") && <h5> | {e.techs}</h5>}
+                  </div>
                     <div className="line">
                       <h4>{e.company}</h4>
                       <p>{e.start} - {e.end}</p>
                     </div>
-                    <div className="line">
-                      <ul>
-                        {e.did.map((d) => (
-                          <li>{d}</li>
-                        ))}
-                      </ul>
-                    </div>
+                    {e.did.map((d) => (
+                      <p>∙ {d}</p>
+                    ))}
                   </div>
                 )
               })}

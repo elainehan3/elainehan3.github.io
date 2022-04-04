@@ -11,11 +11,8 @@ export default function AboutMe() {
           </div>
           <div className="right">
             <h2>Hi! I'm Elaine :)</h2>
-            <p>{aboutInfo.longBio}</p>
+            <p>More to come...</p>
             <div className="horizList">
-              <div className="title">
-              </div>
-              <p>{aboutInfo.shortHobbies}</p>
             </div>
           </div>
         </div>

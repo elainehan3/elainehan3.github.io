@@ -14,22 +14,20 @@ export const header = {
 export const skills = [{
   id: "languages",
   title: "Languages",
-  items: "C/C++, Python, HTML/CSS, Bash, TypeScript, Javascript, Kotlin, R",
+  items: "C/C++, Python, Javascript, Kotlin, TypeScript, HTML/CSS, SASS, Bash, R",
 },
 {
   id: "techs",
   title: "Tools & Technologies",
-  items: "React, Git, Docker, Unix/Linux, NodeJS, Docker, Android Studio",
+  items: "ReactJS, Git, Android Studio, Unix/Linux, Docker, Node.js, Figma, Django, Jira, WordPress",
 },
 ]
-
-//create a script to automate a manual process to reduce improve team effiency my reducing time to publish reports from by automating a 2h publishing worflow to seconds 
 
 export const projects = [
   {
     id: "site",
     title: "Personal Website",
-    techs: "React, JavaScript, HTML/CSS",
+    techs: "React, JavaScript, HTML/SCSS",
     did:
       [
         "Designed, developed, and deployed a mobile-friendly & responsive portfolio website with interactive elements",
@@ -38,34 +36,40 @@ export const projects = [
       ],
     desc: "Responsive, mobile-friendly portfolio website with interactive elements",
     img: "assets/siteSS.png",
+    demo: "",
+    demoName: "",
     link: "https://github.com/elainehan3/elainehan3.github.io",
     linkName: "On GitHub",
   },
   {
     id: "weather",
     title: "Weather App",
-    techs: "React, JavaScript, HTML/CSS",
+    techs: "React, JavaScript, HTML/SCSS",
     did:
       [
         "Mobile-friendly and responsive weather web app using OpenWeather API",
       ],
     desc: "Mobile-friendly and responsive weather web app using OpenWeather API. Can search by city and country, or city alone, and includes suggestions for countries.",
     img: "assets/weatherapp.png",
-    link: "https://elainehan3.github.io/#/fun",
-    linkName: "Find it here!",
+    demo: "/fun#weather",
+    demoName: "Find it here!",
+    link: "https://github.com/elainehan3/elainehan3.github.io",
+    linkName: "On GitHub",
   },
   {
     id: "hay",
     title: "Needle In A Haystack",
-    techs: "React, JavaScript, HTML/CSS",
+    techs: "React, JavaScript, HTML/SCSS",
     did:
       [
         "Fully functioning and responsive i-Spy minigame",
       ],
-    desc: "Fully functioning i-Spy minigame",
+    desc: "A silly i-Spy minigame created with React.",
     img: "assets/needleinhay.png",
-    link: "https://elainehan3.github.io/#/fun",
-    linkName: "Find it here!",
+    demo: "/fun#findneedle",
+    demoName: "See it here!",
+    link: "https://github.com/elainehan3/elainehan3.github.io",
+    linkName: "On GitHub",
   },
   {
     id: "mealtime",
@@ -76,8 +80,10 @@ export const projects = [
         "Collaborated to design and develop an Android meal planning app with recipe suggestions, and grocery list planning",
         "Implemented front-end and navigation",
       ],
-    desc: "Android meal planning app with recipe suggestions and grocery list planning",
+    desc: "Android meal planning app with recipe suggestions and grocery list planning.",
     img: "assets/mealtime.jpeg",
+    demo: "",
+    demoName: "",
     link: "https://github.com/Miniapple8888/MealTime",
     linkName: "On GitHub",
   },
@@ -92,7 +98,9 @@ export const projects = [
         "Received a grade of 100%",
       ],
     desc: "Fully-functioning two-player Tetris game with XWindow graphical user interface, using object-oriented design patterns such as MVC, observer, and decorator. Recieved grade of 100%.",
-    img: "https://i.pinimg.com/originals/e9/c9/2f/e9c92f7869d682a6fa5a97fb8a298f30.jpg",
+    img: "assets/biquadris.png",
+    demo: "",
+    demoName: "",
     link: "mailto:elaine.han@uwaterloo.ca",
     linkName: "Code available upon request",
   }
@@ -110,8 +118,10 @@ export const resumeSite = {
     ],
   desc: "Responsive, mobile-friendly portfolio website with interactive elements",
   img: "assets/siteSS.png",
-  link: "https://github.com/elainehan3/elainehan3.github.io",
-  linkName: "On GitHub",
+  demo: "",
+  demoName: "",
+  link: "https://elainehan3.github.io",
+  linkName: "elainehan3.github.io",
 }
 
 export const resumeProjects = [
@@ -121,13 +131,15 @@ export const resumeProjects = [
     techs: "Kotlin, Android Studio",
     did:
       [
-        "Collaborated to design and develop an Android meal planning app with recipe suggestions, and grocery list planning",
+        "Collaborated to design and develop an Android meal planning app with recipe suggestions and grocery list planning",
         "Implemented front-end and navigation",
       ],
     desc: "Android meal planning app with recipe suggestions and grocery list planning",
     img: "assets/mealtime.jpeg",
-    link: "https://https://github.com/Miniapple8888/MealTime",
-    linkName: "On GitHub",
+    demo: "",
+    demoName: "",
+    link: "https://github.com/Miniapple8888/MealTime",
+    linkName: "github.com/Miniapple8888/MealTime",
   },
   {
     id: "biquadris",
@@ -141,6 +153,8 @@ export const resumeProjects = [
       ],
     desc: "Fully-functioning two-player Tetris game with XWindow graphical user interface, using object-oriented design patterns such as MVC, observer, and decorator. Recieved grade of 100%.",
     img: "https://i.pinimg.com/originals/e9/c9/2f/e9c92f7869d682a6fa5a97fb8a298f30.jpg",
+    demo: "",
+    demoName: "",
     link: "",
     linkName: "Code available upon request",
   }
@@ -151,20 +165,20 @@ export const experience = [
     id: "deloitte",
     img:
       "https://upload.wikimedia.org/wikipedia/commons/2/2b/DeloitteNewSmall.png",
-    //"https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Deloitte.svg/440px-Deloitte.svg.png"
     icon: "https://media-exp1.licdn.com/dms/image/C4E0BAQHda-o9KT2w5Q/company-logo_200_200/0/1625689676984?e=2147483647&v=beta&t=y4-UjyA7OEgXO-8QfS0XFMZcQg8Ku-1k3P3Ux_nu-2M",
     icon2: "https://upload.wikimedia.org/wikipedia/commons/2/2b/DeloitteNewSmall.png",
     title: "Cyber Security Intern",
     company: "Deloitte",
     start: "Sep 2021",
     end: "Dec 2021",
-    where: "Remote",
+    where: "Vancouver, BC (Remote)",
     desc: "",
     did:
       [
-        "Analyzed client web infrastructure for vulnerabilities",
-        "Created daily cyber security reports for commercial clients",
-        "Developed text formatting tools in Python to enhance team workflow efficiency",
+        "Developed text formatting tools in Python to automate a manual editing process, reducing team's publishing workflow from ~1h daily to several minutes",
+        "Analyzed client web infrastructure for vulnerabilities and created reports with client-specific recommendations",
+        "Researched, produced and published daily technical reports analyzing computer vulnerabilities and malicious software",
+        //"Create a script to automate a manual process to reduce improve team effiency my reducing time to publish reports from by automating a 2h publishing worflow to seconds"
       ],
   },
   {
@@ -175,12 +189,12 @@ export const experience = [
     title: "STEM Instructor",
     company: "IdeaLab Kids Calgary",
     start: "Nov 2019",
-    end: "Sep 2021",
+    end: "Aug 2021",
     where: "Calgary, AB",
-    desc: "Lead class of 10+ kids in Lego Robotics w/ Arduino or science experiments for afterschool programs and summer camps",
+    desc: "Lead science, math, robotics, and programming classes of 10+ students in afterschool programs and summer camps",
     did:
       [
-        "Lead class of 10+ kids in Lego Robotics w/ Arduino or science experiments for afterschool programs and summer camps",
+        "Lead science, math, robotics, and programming classes of 10+ students in afterschool programs and summer camps",
       ],
 
   }
@@ -193,6 +207,7 @@ export const activities = [
     img:
       "https://csclub.uwaterloo.ca/images/logo-icon.svg",
     title: "Bot Developer",
+    techs: "TypeScript, Docker",
     company: "Computer Science Club",
     start: "Sep 2021",
     end: "Present",
@@ -211,6 +226,7 @@ export const activities = [
     img:
       "./assets/uwkpop.png",
     title: "Graphic Design Manager",
+    techs: "",
     company: "UW KPop",
     start: "Sep 2021",
     end: "Present",
@@ -218,7 +234,7 @@ export const activities = [
       "I lead the club's design team in creating advertisements!",
     did:
       [
-        "Lead a design team of 3 to create advertisements",
+        "Lead a design team to create club advertisements",
       ],
   },
 ]
@@ -230,6 +246,7 @@ export const activitiesNotResume = [
     img:
       "https://csclub.uwaterloo.ca/images/logo-icon.svg",
     title: "Event Coordinator",
+    techs: "",
     company: "Computer Science Club",
     start: "Jan 2021",
     end: "Present",

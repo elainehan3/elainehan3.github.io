@@ -1,6 +1,6 @@
 
 import './page.scss'
-import ProjectAcc from './pages/ProjectPage/projectAcc/ProjectAcc'
+import ProjectAcc from './components/ProjectAcc/ProjectAcc'
 
 function ProjectPage() {
   return (

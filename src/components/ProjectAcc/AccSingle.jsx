@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
+import { HashLink as Link } from 'react-router-hash-link';
 import './accSingle.scss';
 
-export default function AccSingle({ title, technologies, desc, img, URL, URLName }) {
+export default function AccSingle({ title, technologies, desc, img, URL, URLName, demoURL, demoURLName }) {
   const [isActive, setIsActive] = useState(false);
   return (
     <div className={isActive ? "accSingle active" : "accSingle"} onClick={() => setIsActive(!isActive)}>
@@ -24,6 +25,7 @@ export default function AccSingle({ title, technologies, desc, img, URL, URLName
         {isActive &&
           <div className="descrip">
             <p>{desc}</p>
+            {(demoURL !== "") && <Link to={demoURL}>{demoURLName}</Link>}
             <a href={URL}>{URLName}</a>
           </div>
         }

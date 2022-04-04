@@ -1,9 +1,9 @@
 import './app.scss'
 import { useState } from "react";
 import { Routes, Route } from 'react-router-dom';
-import Topbar from './components/HeaderFooter/topbar/Topbar'
-import Menu from "./components/HeaderFooter/menu/Menu";
-import Contact from './components/HeaderFooter/contact/Contact'
+import Topbar from './pages/HeaderFooter/topbar/Topbar'
+import Menu from "./pages/HeaderFooter/menu/Menu";
+import Contact from './pages/HeaderFooter/contact/Contact'
 import Home from './Home';
 import About from './About';
 import ProjectPage from './ProjectPage';

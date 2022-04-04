@@ -1,7 +1,6 @@
-//import { useEffect, useState } from "react";
-import AccSingle from "../../../components/accSingle/AccSingle";
+import AccSingle from "./AccSingle";
 import "./projectAcc.scss";
-import { projects } from "../../../data/resumeData";
+import { projects } from "../../data/resumeData";
 
 export default function ProjectAcc() {
   return (
@@ -14,6 +13,8 @@ export default function ProjectAcc() {
           img={p.img}
           URL={p.link}
           URLName={p.linkName}
+          demoURL={p.demo}
+          demoURLName={p.demoName}
         />
       ))}
     </div>

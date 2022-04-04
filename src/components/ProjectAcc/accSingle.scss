@@ -3,7 +3,6 @@
 .accSingle {
   width: 700px;
   font-size: 14px;
-  cursor: pointer;
   align-content: center;
   justify-content: center;
   @include mobile{
@@ -118,8 +117,8 @@
   }
 }
 .accSingle.active {
-  transform: scale(1.05);
-  box-shadow: 0px 0px 15px -8px $darkColor;
+  //transform: scale(1.05);
+  //box-shadow: 0px 0px 15px -8px $darkColor;
   .item {
     .visible {
       .right {
