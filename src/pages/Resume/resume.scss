@@ -68,11 +68,13 @@
 }
 .resume h5 {
   font-size: 11pt;
-  font-weight: normal;
+  font-weight: bold;
   text-transform: unset;
 }
 .resume p {
+  margin-left: 10px;
   font-size: 10pt;
+  text-indent: -10px;
 }
 .resume a {
   all: unset;
@@ -86,8 +88,9 @@
   line-height: 120%;
 }
 .resume li {
-  margin: 0;
-  padding: 0;
+  margin-left: 10px;
+  font-size: 10pt;
+  text-indent: -10px;
 }
 .resume .icon {
   color: #741b47;

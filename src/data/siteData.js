@@ -16,7 +16,7 @@ export const menuLinks = [
   },
   {
     id: "fun",
-    link: "/fun",
+    link: "/showcase",
     title: "Fun Stuff!",
   },
   {

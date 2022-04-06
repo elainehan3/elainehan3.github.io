@@ -1,6 +1,6 @@
 import "./resume.scss";
 import React from 'react';
-import { Mail, Phone, LinkedIn, Language } from "@mui/icons-material";
+import { Mail, LinkedIn, Language, GitHub } from "@mui/icons-material";
 import * as rdata from "../../data/resumeData.js";
 
 export default class ResumeOnly extends React.PureComponent {
@@ -11,22 +11,23 @@ export default class ResumeOnly extends React.PureComponent {
           <div className="section">
             <div className="header">
               <h1>{rdata.header.name}</h1>
+              <h4>2B Honors Bachelor of Computer Science</h4>
               <div className="contacts">
                 <div className="contact-and-icon">
                   <Mail className="icon" />
-                  <a href={rdata.header.emailLink}><h5>{rdata.header.email}</h5></a>
-                </div>
-                <div className="contact-and-icon">
-                  <Phone className="icon" />
-                  <h5>{rdata.header.phone}</h5>
+                  <a href={rdata.header.emailLink}><h4>{rdata.header.email}</h4></a>
                 </div>
                 <div className="contact-and-icon">
                   <LinkedIn className="icon" />
-                  <a href={rdata.header.linkedInLink}><h5>{rdata.header.linkedIn}</h5></a>
+                  <a href={rdata.header.linkedInLink}><h4>{rdata.header.linkedIn}</h4></a>
+                </div>
+                <div className="contact-and-icon">
+                  <GitHub className="icon" />
+                  <a href={rdata.header.githubLink}><h4>{rdata.header.github}</h4></a>
                 </div>
                 <div className="contact-and-icon">
                   <Language className="icon" />
-                  <a href={rdata.header.siteLink}><h5>{rdata.header.site}</h5></a>
+                  <a href={rdata.header.siteLink}><h4>{rdata.header.site}</h4></a>
                 </div>
               </div>
             </div>
@@ -39,7 +40,7 @@ export default class ResumeOnly extends React.PureComponent {
                 return (
                   <div className="skill-list-name">
                     <h3>{l.title}: </h3>
-                    <p>{l.items}</p>
+                    <h5>{l.items}</h5>
                   </div>
                 )
               })}
@@ -49,40 +50,38 @@ export default class ResumeOnly extends React.PureComponent {
             <h2>Projects</h2>
             <hr />
             <div className="data">
-              <div className="entry">
-                <div className="line">
-                  <div className="plainline">
-                    <h3>{rdata.resumeSite.title}</h3><h5> | {rdata.resumeSite.techs}</h5>
-                  </div>
-                  <a href={rdata.resumeSite.link}><p>elainehan3.github.io</p></a>
-                </div>
-                {/* <div className="line"> */}
-                {/* <ul>
-                    <li>Designed, developed, and deployed a mobile-friendly & responsive portfolio website with interactive elements</li>
-                    <li>Site also hosts small projects such as:</li>
-                    <ul>
-                      <li><strong>Needle in a Haystack</strong> - Fully functioning and responsive i-Spy minigame</li>
-                      <li><strong>Weather</strong> - Mobile-friendly and responsive weather web app using OpenWeather API</li>
-                    </ul>
-                  </ul> */}
-                <p>∙ Designed, developed, and deployed a mobile-friendly & responsive portfolio website with interactive elements</p>
-                <p>∙ Site also hosts small projects such as:</p>
-
-                <p><strong>&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp; Needle in a Haystack</strong> - Fully functioning and responsive i-Spy minigame</p>
-                <p><strong>&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp; Weather</strong> - Mobile-friendly and responsive weather web app using OpenWeather API</p>
-
-                {/* </div> */}
-              </div>
-              {rdata.resumeProjects.map(p => {
+              {rdata.projectsResume.map(p => {
                 return (
                   <div className="entry">
                     <div className="line">
                       <div className="plainline">
-                        <h3>{p.title}</h3><h5> | {p.techs}</h5>
+                        <h3 style={{fontWeight:"normal"}}>{p.title} — </h3><h5>{p.techs}</h5>
                       </div>
-                      {(p.link !== "") ? <a href={p.link}><p>{p.linkName}</p></a> : <p style={{whiteSpace:"nowrap"}}>{p.linkName}</p>}
+                      <a href={p.resumeLink}><p style={{whiteSpace:"nowrap"}}><i>{p.resumeLinkName}</i></p></a>
                     </div>
                     {p.did.map((d) => (
+                      <p>∙ {d}</p>
+                    ))}
+                  </div>
+                )
+              })}
+            </div>
+          </div>
+          <div className="section">
+            <h2>Activities</h2>
+            <hr />
+            <div className="data">
+              {rdata.activities.map(e => {
+                return (
+                  <div className="entry">
+                  <div className="plainline">
+                    <h3>{e.title} — </h3>{(e.techs !== "") && <h5>{e.techs}</h5>}
+                  </div>
+                    <div className="line">
+                      <h4>{e.company}</h4>
+                      <p>{e.start} - {e.end}</p>
+                    </div>
+                    {e.did.map((d) => (
                       <p>∙ {d}</p>
                     ))}
                   </div>
@@ -98,7 +97,7 @@ export default class ResumeOnly extends React.PureComponent {
                 return (
                   <div className="entry">
                     <div className="line">
-                      <h3>{e.title}</h3><h5> | </h5>
+                      <h3>{e.title}</h3>
                     </div>
                     <div className="line">
                       <h4>{e.company}</h4>
@@ -108,28 +107,6 @@ export default class ResumeOnly extends React.PureComponent {
                       <p>∙ {d}</p>
                     ))}
 
-                  </div>
-                )
-              })}
-            </div>
-          </div>
-          <div className="section">
-            <h2>Activities</h2>
-            <hr />
-            <div className="data">
-              {rdata.activities.map(e => {
-                return (
-                  <div className="entry">
-                  <div className="plainline">
-                    <h3>{e.title}</h3>{(e.techs !== "") && <h5> | {e.techs}</h5>}
-                  </div>
-                    <div className="line">
-                      <h4>{e.company}</h4>
-                      <p>{e.start} - {e.end}</p>
-                    </div>
-                    {e.did.map((d) => (
-                      <p>∙ {d}</p>
-                    ))}
                   </div>
                 )
               })}

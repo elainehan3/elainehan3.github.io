@@ -1,8 +1,9 @@
 import './page.scss';
 import Resume from './pages/Resume/Resume';
+import ResumeDev from './pages/Resume/ResumeDev';
 
 
-export default function ResumePage() {
+export default function ResumePage(dev) {
   return (
     <div className="page">
       <div className="page-sections">
@@ -10,7 +11,8 @@ export default function ResumePage() {
           <h1>Resume</h1>
           <div className="divider">_________________________</div>
         </div>
-        <Resume />
+        {dev ? <ResumeDev /> : <Resume />}
+
       </div>
     </div>
   );

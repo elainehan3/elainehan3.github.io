@@ -2,6 +2,9 @@
 
 # garbage
 /src/extras
+/src/data/resumeDevData.js
+/src/pages/Resume/ResumeDev.jsx
+/src/pages/Resume/ResumeDevOnly.jsx
 
 # dependencies
 /node_modules
