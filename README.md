@@ -1,6 +1,6 @@
 # My Personal Site
 
-My portfolio site, built with React. Visit [elainehan3.github.io](http://elainehan3.github.io) to see it!
+My portfolio site, built with React, HTML/CSS. Visit [elainehan3.github.io](http://elainehan3.github.io) to see it!
 
 The [Fun](http://elainehan3.github.io/#/fun) page also showcases some additional projects:
 
