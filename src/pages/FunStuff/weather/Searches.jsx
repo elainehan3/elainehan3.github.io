@@ -28,7 +28,7 @@ class Searches extends Component {
     //console.log('Search render');
     return (
       <section className="search-container">
-        <form className="form" onSubmit={this.handleSubmit}>
+        <form className="search" onSubmit={this.handleSubmit}>
           <div className="search-row">
             <input
               aria-label="Search by city name"

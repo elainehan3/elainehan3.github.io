@@ -19,7 +19,7 @@ export const skills = [{
 {
   id: "techs",
   title: "Tools & Technologies",
-  items: "ReactJS, Git, Unix/Linux, Docker, Node.js, SQLite, Figma, Android Studio, Django, Jira, WordPress",
+  items: "ReactJS, Git, Unix/Linux, Docker, Node.js, SQLite, Figma, Android Studio, Django",
 },
 ]
 

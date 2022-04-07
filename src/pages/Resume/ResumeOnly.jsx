@@ -40,7 +40,7 @@ export default class ResumeOnly extends React.PureComponent {
                 return (
                   <div className="skill-list-name">
                     <h3>{l.title}: </h3>
-                    <h5>{l.items}</h5>
+                    <h4>{l.items}</h4>
                   </div>
                 )
               })}

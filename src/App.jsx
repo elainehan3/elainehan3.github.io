@@ -31,10 +31,10 @@ function App() {
           <Route exact path='/about' element={<About />}></Route>
           <Route exact path='/projects' element={<ProjectPage />}></Route>
           <Route exact path='/showcase' element={<FunStuff />}></Route>
-          <Route exact path='/resume' element={<ResumePage dev={false} />}></Route>
+          <Route exact path='/resume' element={<ResumePage dev="false" />}></Route>
           <Route exact path='/dev' 
           element={
-            (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') ? <ResumePage dev={true} /> : <ResumePage dev={false} />
+            (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') ? <ResumePage dev="true" /> : <ResumePage dev="false"/>
             }>
           </Route>
         </Routes>
