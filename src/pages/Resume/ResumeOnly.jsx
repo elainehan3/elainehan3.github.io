@@ -1,7 +1,7 @@
 import "./resume.scss";
 import React from 'react';
 import { Mail, LinkedIn, Language, GitHub } from "@mui/icons-material";
-import * as rdata from "../../data/resumeDevData.js";
+import * as rdata from "../../data/resumeData.js";
 
 function Skills() {
   return (
