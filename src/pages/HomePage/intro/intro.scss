@@ -85,20 +85,22 @@
         }
       }
       .l3 {
+        margin-top: 10px;
         font-weight: 300;
-        font-size: 40px;
+        font-size: 30px;
         .ityped-cursor {
           animation: blink 1s infinite;
         }
         span {
           font-family: $headerFonts;
+          color: $flowerMainColor;
         }
         @keyframes blink {
             50%{opacity: 1;}
             100%{opacity: 0;}
         }
         @include mobile{
-          font-size: 27px;
+          font-size: 18px;
         }
       }
     }

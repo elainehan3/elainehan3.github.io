@@ -29,6 +29,7 @@
     font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
    }
 }
+
 .needleHead {
   display: flex;
   flex-direction: column;
@@ -47,18 +48,23 @@
     margin: 0 10px;
   }
 }
+
 .gameBox {
   display: flex;
   flex-direction: column;
   width: 90%;
   display: flex;
   overflow: hidden;
+  border-radius: 5px;
 }
+
 .img-back-cont {
+  display: flex;
   width: 100%;
   height: 700px;
   overflow: hidden;
 }
+
 .back {
   width: 100%;
   height: 700px;
@@ -88,13 +94,13 @@
 }
 .findneedle .foundDis {
   display: none;
+  position: absolute;
+  bottom: 500px;
 }
 .findneedle .foundDis.display {
   align-self: center;
   justify-self: center;
   width: 150px;
-  position: relative;
-  top: -450px;
   //left: 42%;
   z-index: 2;
   display: inline-block;
@@ -104,6 +110,14 @@
   margin-top: 10px;
   padding: 10px;
   border-radius: 10px;
+}
+
+.findneedle .confetti-container {
+  display: block;
+  width: 87%;
+  height: 700px;
+  overflow: hidden;
+  position: absolute;
 }
 
 .findneedle .gameBox button {

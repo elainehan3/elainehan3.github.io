@@ -1,5 +1,6 @@
 export const header = {
   name: "Elaine Han",
+  year: "3A Honors Bachelor of Computer Science",
   email: "elaine.han@uwaterloo.ca",
   emailLink: "mailto:elaine.han@uwaterloo.ca",
   phone: "403-966-8805",
@@ -14,12 +15,12 @@ export const header = {
 export const skills = [{
   id: "languages",
   title: "Languages",
-  items: "C/C++, Javascript, Python, TypeScript, Kotlin, HTML/CSS, SASS, Bash, R",
+  items: "TypeScript, Python, Javascript, C/C++, Kotlin, HTML/CSS, PHP, Bash, R",
 },
 {
   id: "techs",
   title: "Tools & Technologies",
-  items: "ReactJS, Git, Unix/Linux, Docker, Node.js, SQLite, Figma, Android Studio, Django",
+  items: "React, React Native, Django, PostgreSQL, SQLite, Git, Node.js, Figma, Android Studio",
 },
 ]
 
@@ -53,26 +54,6 @@ export const projectsNotResume = [
     link: "https://github.com/elainehan3/elainehan3.github.io",
     linkName: "On GitHub",
   },
-]
-
-export const projectsResume = [
-  {
-    id: "site",
-    title: "Personal Website",
-    techs: "React, Node.js, JavaScript/HTML/CSS",
-    did:
-      [
-        "Designed, developed, and deployed a mobile-friendly & responsive portfolio website with interactive elements, minigames",
-      ],
-    desc: "Responsive, mobile-friendly portfolio website with interactive elements",
-    img: "assets/siteSS.png",
-    demo: "",
-    demoName: "",
-    link: "https://github.com/elainehan3/elainehan3.github.io",
-    linkName: "Source code here",
-    resumeLink: "https://elainehan3.github.io",
-    resumeLinkName: "elainehan3.github.io",
-  },
   {
     id: "weather",
     title: "Weather Web App",
@@ -98,7 +79,7 @@ export const projectsResume = [
     did:
       [
         "Collaborated to design and develop an Android meal planning app with recipe suggestions and grocery list planning",
-        "Implemented front-end and navigation",
+        "Prototyped and implemented front-end and navigation",
         "Awarded \"Most Liked\" project at Project Program Hackathon",
       ],
     desc: "Android meal planning app with recipe suggestions and grocery list planning",
@@ -110,6 +91,27 @@ export const projectsResume = [
     resumeLink: "https://github.com/Miniapple8888/MealTime",
     resumeLinkName: "github.com/Miniapple8888/MealTime",
   },
+]
+
+export const projectsResume = [
+  {
+    id: "site",
+    title: "Personal Website",
+    techs: "React, Node.js, JavaScript/HTML/CSS",
+    did:
+      [
+        "Designed, developed, and deployed a mobile-friendly & responsive portfolio website with interactive elements, minigames",
+      ],
+    desc: "Responsive, mobile-friendly portfolio website with interactive elements",
+    img: "assets/siteSS.png",
+    demo: "",
+    demoName: "",
+    link: "https://github.com/elainehan3/elainehan3.github.io",
+    linkName: "Source code here",
+    resumeLink: "https://elainehan3.github.io",
+    resumeLinkName: "elainehan3.github.io",
+  },
+  
   {
     id: "biquadris",
     title: "Biquadris",
@@ -131,9 +133,32 @@ export const projectsResume = [
   },
 ]
 
-export const projects = projectsResume.concat(projectsNotResume);
+export const projects = projectsNotResume.concat(projectsResume);
 
 export const experience = [
+  {
+    id: "fleet",
+    img:
+      "https://uploads-ssl.webflow.com/60c7f12862eab431c781bc24/60c8e2b2d87c448861721c13_fleet-full-white.png",
+    icon: "https://media-exp1.licdn.com/dms/image/C4E0BAQGPwM5BYD6zxw/company-logo_200_200/0/1600215946485?e=2147483647&v=beta&t=iHX1efR3ES2jHZcoKDHP87gxKHPIlLlARiIeMEFWr5U",
+    title: "Full-Stack Software Engineer",
+    company: "Move With Fleet",
+    start: "May 2022",
+    end: "Aug 2022",
+    where: "Toronto, ON (Remote)",
+    techs: "React, Django, Typescript, Python, PostgreSQL",
+    desc: "",
+    did:
+      [
+        "Launched a user approval web tool with custom React components, managing data from 250+ users via Django REST",
+        "Implemented end-to-end CRUD operations, including batch user rollouts/removals and Stripe activations, using Django ORM and transactions, with PostgreSQL database",
+        "Built quick-add trip logging tool with custom screens to handle user reporting for 9000+ monthly trips in React Native",
+        "Overhauled mobile navigation and developed consolidated screens to decouple code and streamline user interface",
+        //"Configured 10+ analytics actions app-wide to optimize user insights and efficiency with Segment",
+        //"Investigated and reported IOS/Android app bugs using Bugsnag and performed ad-hoc bug-fixes",
+        "Designed various UI components for web and mobile app with Figma",
+      ],
+    },
   {
     id: "deloitte",
     img:
@@ -148,7 +173,8 @@ export const experience = [
     desc: "",
     did:
       [
-        "Developed Python tools to automate a text formatting process, removing the need for manual editing and improving team's publishing workflow", 
+        "Developed tools in Python to automate a text formatting process, removing the need for manual editing and improving team's publishing workflow by ~1 hour per day",
+        "Automated and improved a time-tracking Jira dashboard gadget, reducing documentation workflow by ~10 minutes",
         "Analyzed client web infrastructure for vulnerabilities and created reports with client-specific recommendations",
         "Researched, produced and published daily technical reports analyzing computer vulnerabilities and malicious software",
       ],
@@ -187,7 +213,7 @@ export const activities = [
       "I help develop CS club's discord bot!",
     did:
       [
-        "Work with development team to brainstorm, plan, and implement new and requested features for CSC server Discord bot",
+        "Worked with development team to brainstorm, plan, and implement new and requested features for CSC server Discord bot",
         "Collaborated to implement mock interview scheduling and server currency features ",
       ],
 

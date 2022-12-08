@@ -11,7 +11,7 @@ export default class ResumeOnly extends React.PureComponent {
           <div className="section">
             <div className="header">
               <h1>{rdata.header.name}</h1>
-              <h4>2B Honors Bachelor of Computer Science</h4>
+              <h4>{rdata.header.year}</h4>
               <div className="contacts">
                 <div className="contact-and-icon">
                   <Mail className="icon" />

@@ -11,7 +11,7 @@ export default function ResumePage(dev) {
           <h1>Resume</h1>
           <div className="divider">_________________________</div>
         </div>
-        {dev === "true" ? <ResumeDev /> : <Resume />}
+        {dev === "true" ? <ResumeDev /> : <ResumeDev />}
 
       </div>
     </div>

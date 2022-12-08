@@ -12,18 +12,18 @@ export default function Intro() {
     init(hi.current, { 
       showCursor: false, 
       loop: false, 
-      strings: [ 'Hi! My name is'] });
+      strings: [ 'Hi!'] });
     init(elaine.current, {
       showCursor: false, 
       loop: false, 
       startDelay: 2000, 
-      strings: [ 'Elaine.']
+      strings: [ "I'm Elaine."]
     });
     init(nice.current, { 
       showCursor: false, 
       loop: false, 
-      startDelay: 3200,
-      strings: [ 'Nice to meet you :)'] 
+      startDelay: 3800,
+      strings: [ 'Happy to see you here :)'] 
     });
   }, []);
 
@@ -36,8 +36,8 @@ export default function Intro() {
       </div>
       <div className="right">
         <div className="wrapper">
-          <div className="l2"> <span ref={hi}></span> </div>
-          <div className="l1"><span ref={elaine}></span> </div>
+          <div className="l1"> <span ref={hi}></span> </div>
+          <div className="l2"><span ref={elaine}></span> </div>
           <div className="l3"> <span ref={nice}></span> </div>
         </div>
         {/* <a href="#aboutMe">

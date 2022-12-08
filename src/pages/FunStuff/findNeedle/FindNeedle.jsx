@@ -3,12 +3,13 @@
 // import useSound from "use-sound"
 import React, { useState } from "react"
 import "./findneedle.scss";
-//import Confetti from "react-dom-confetti"
+import Confetti from "./Confetti"
 
 export default function FindNeedle() {
   const needleWidth = 45;
   const imgHeight = 700;
   const [found, setFound] = useState(false);
+  const [showConfetti, setShowConfetti] = useState(false);
   const [showPlayAgain, setShowPlayAgain] = useState(false);
   const getRandY = (max) => {
     return needleWidth + Math.floor(Math.random() * (max - needleWidth));
@@ -23,7 +24,7 @@ export default function FindNeedle() {
 
   const restart = () => {
     setFound(0);
-    //setShowConfetti(false);
+    setShowConfetti(false);
     setShowPlayAgain(false);
     setPosY(getRandY(imgHeight));
     setPosX(getRandX(90));
@@ -34,9 +35,7 @@ export default function FindNeedle() {
   const isFound = () => {
     if (!found) {
       setShowPlayAgain(true);
-      // setTimeout(() => {
-      //   setShowConfetti(true)
-      // }, 420)
+      setShowConfetti(true);
     }
     setFound(true)
   }
@@ -72,14 +71,20 @@ export default function FindNeedle() {
             alt="needle"
             style={{
               opacity: found ? 1 : 0.5,
-              // top: "-400px",
-              //left: "88%",
             }}
           />
         </div>
         <div className={showPlayAgain ? "foundDis display" : "foundDis"}>
           <p>You found it!</p>
           <button onClick={restart}>Play again!</button>
+        </div>
+        <div className="confetti-container">
+          {showConfetti && (
+            <Confetti
+              options={{ count: 100, gravity: 20, timeout: 3 }}
+              streamAnimation={showConfetti}
+            />
+          )}
         </div>
       </div>
     </div>
