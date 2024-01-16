@@ -174,9 +174,9 @@ export const experience = [
     did:
       [
         "Developed tools in Python to automate a text formatting process, removing the need for manual editing and improving team's publishing workflow by ~1 hour per day",
-        "Automated and improved a time-tracking Jira dashboard gadget, reducing documentation workflow by ~10 minutes",
+        //"Automated and improved a time-tracking Jira dashboard gadget, reducing documentation workflow by ~10 minutes",
         "Analyzed client web infrastructure for vulnerabilities and created reports with client-specific recommendations",
-        "Researched, produced and published daily technical reports analyzing computer vulnerabilities and malicious software",
+        //"Researched, produced and published daily technical reports analyzing computer vulnerabilities and malicious software",
       ],
   },
   {

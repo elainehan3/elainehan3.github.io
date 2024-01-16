@@ -99,32 +99,32 @@ function Projects() {
   )
 }
 
-function Activities() {
-  return (
-    <div className="section">
-      <h2>Activities</h2>
-      <hr />
-      <div className="data">
-        {rdata.activities.map(e => {
-          return (
-            <div className="entry">
-              <div className="plainline">
-                <h3>{e.title} </h3>{(e.techs !== "") && <h5>— {e.techs}</h5>}
-              </div>
-              <div className="line">
-                <h4>{e.company}</h4>
-                <p>{e.start} - {e.end}</p>
-              </div>
-              {e.did.map((d) => (
-                <p>∙ {d}</p>
-              ))}
-            </div>
-          )
-        })}
-      </div>
-    </div>
-  )
-}
+// function Activities() {
+//   return (
+//     <div className="section">
+//       <h2>Activities</h2>
+//       <hr />
+//       <div className="data">
+//         {rdata.activities.map(e => {
+//           return (
+//             <div className="entry">
+//               <div className="plainline">
+//                 <h3>{e.title} </h3>{(e.techs !== "") && <h5>— {e.techs}</h5>}
+//               </div>
+//               <div className="line">
+//                 <h4>{e.company}</h4>
+//                 <p>{e.start} - {e.end}</p>
+//               </div>
+//               {e.did.map((d) => (
+//                 <p>∙ {d}</p>
+//               ))}
+//             </div>
+//           )
+//         })}
+//       </div>
+//     </div>
+//   )
+// }
 
 export default class ResumeOnly extends React.PureComponent {
   render() {
@@ -161,7 +161,7 @@ export default class ResumeOnly extends React.PureComponent {
           <Projects />
           
           
-          <Activities />
+          {/* <Activities /> */}
           
           <Education />
         </div>
