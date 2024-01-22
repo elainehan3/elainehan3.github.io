@@ -18,7 +18,7 @@ export default function Experience() {
               <div className="left">
                 <div className="leftContainer">
                   <h5>{d.start} - {d.end}</h5>
-                  <div className="companyContainer">
+                  <div className="companyContainer"> {/* this div only shows up on mobile */ }
                     <div className="imgContainer">
                       <img src={d.icon} alt="" />
                     </div>

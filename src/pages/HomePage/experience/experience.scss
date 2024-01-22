@@ -53,6 +53,9 @@
           }
         }
         .right {
+          img {
+            border-radius: 10px;
+          }
           @include mobile {
             display: none;
           }

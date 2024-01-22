@@ -139,9 +139,8 @@ export const experience = [
   {
     id: "goeasy",
     img:
-      "https://upload.wikimedia.org/wikipedia/commons/2/2b/DeloitteNewSmall.png",
-    icon: "https://media-exp1.licdn.com/dms/image/C4E0BAQHda-o9KT2w5Q/company-logo_200_200/0/1625689676984?e=2147483647&v=beta&t=y4-UjyA7OEgXO-8QfS0XFMZcQg8Ku-1k3P3Ux_nu-2M",
-    icon2: "https://upload.wikimedia.org/wikipedia/commons/2/2b/DeloitteNewSmall.png",
+      "./assets/goeasy.png",
+    icon: "./assets/goeasy.png",
     title: "Front-End Developer",
     company: "goeasy LTD",
     start: "Sep 2023",
@@ -164,9 +163,8 @@ export const experience = [
   {
     id: "ford",
     img:
-      "https://upload.wikimedia.org/wikipedia/commons/2/2b/DeloitteNewSmall.png",
-    icon: "https://media-exp1.licdn.com/dms/image/C4E0BAQHda-o9KT2w5Q/company-logo_200_200/0/1625689676984?e=2147483647&v=beta&t=y4-UjyA7OEgXO-8QfS0XFMZcQg8Ku-1k3P3Ux_nu-2M",
-    icon2: "https://upload.wikimedia.org/wikipedia/commons/2/2b/DeloitteNewSmall.png",
+      "https://www.ford.co.nz/content/dam/Ford/website-assets/ap/nz/about/use_of_logo/desktop-1.jpg/jcr:content/renditions/small.jpg",
+    icon: "https://pbs.twimg.com/profile_images/1397213512523468800/Ua8S36A7_400x400.jpg",
     title: "Unreal Engine Developer",
     company: "Ford Motor Companies",
     start: "Jan 2023",
@@ -183,9 +181,9 @@ export const experience = [
   },
   {
     id: "fleet",
-    img:
-      "https://uploads-ssl.webflow.com/60c7f12862eab431c781bc24/60c8e2b2d87c448861721c13_fleet-full-white.png",
-    icon: "https://media-exp1.licdn.com/dms/image/C4E0BAQGPwM5BYD6zxw/company-logo_200_200/0/1600215946485?e=2147483647&v=beta&t=iHX1efR3ES2jHZcoKDHP87gxKHPIlLlARiIeMEFWr5U",
+    icon:
+      "https://media-exp1.licdn.com/dms/image/C4E0BAQGPwM5BYD6zxw/company-logo_200_200/0/1600215946485?e=2147483647&v=beta&t=iHX1efR3ES2jHZcoKDHP87gxKHPIlLlARiIeMEFWr5U",
+    img: "https://media-exp1.licdn.com/dms/image/C4E0BAQGPwM5BYD6zxw/company-logo_200_200/0/1600215946485?e=2147483647&v=beta&t=iHX1efR3ES2jHZcoKDHP87gxKHPIlLlARiIeMEFWr5U",
     title: "Full-Stack Software Engineer",
     company: "Move With Fleet",
     start: "May 2022",
