@@ -1,6 +1,6 @@
 export const aboutInfo = {
-  longBio: "Hi! I'm Elaine, a current 2nd year Computer Science, Co-op student at the University of Waterloo, and I am passionate about being involved, learning lots, and making a difference. I am constantly looking to learn, improve myself, and meet new people. Please don't hesitate to reach out, I would love to connect!",
-  shortBio: "Hello! I'm Elaine, currently a 2nd year Computer Science student at the University of Waterloo. I'm an aspiring software developer hoping to grow, excel, and make an impact wherever I go!",
+  longBio: "Hi! I'm Elaine, a current 4th year Computer Science, Co-op student at the University of Waterloo, and I am passionate about being involved, learning lots, and making a difference. I am constantly looking to learn, improve myself, and meet new people. Please don't hesitate to reach out, I would love to connect!",
+  shortBio: "Hello! I'm Elaine, currently a 4th year Computer Science student at the University of Waterloo. I'm an aspiring software developer hoping to grow, excel, and make an impact wherever I go!",
   shortHobbies: "Outside of work, I love hiking, painting, making music, and spending time with my dog.",
 }
 

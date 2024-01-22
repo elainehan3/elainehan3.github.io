@@ -1,6 +1,6 @@
 export const header = {
   name: "Elaine Han",
-  year: "3A Honors Bachelor of Computer Science",
+  year: "4A Honors Bachelor of Computer Science",
   email: "elaine.han@uwaterloo.ca",
   emailLink: "mailto:elaine.han@uwaterloo.ca",
   phone: "403-966-8805",
@@ -15,13 +15,13 @@ export const header = {
 export const skills = [{
   id: "languages",
   title: "Languages",
-  items: "TypeScript, Python, Javascript, C/C++, Kotlin, HTML/CSS, PHP, Bash, R",
+  items: "JavaScript/TypeScript, Python, C/C++, SQL, GraphQL, Kotlin, HTML/CSS, Bash",
 },
 {
   id: "techs",
   title: "Tools & Technologies",
-  items: "React, React Native, Django, PostgreSQL, SQLite, Git, Node.js, Figma, Android Studio",
-},
+  items: "React/Redux, Django, React Native, Next.js, Node.js, PostgreSQL, SQLite, Apollo, Figma",
+}
 ]
 
 /* <div className="entry">
@@ -137,6 +137,51 @@ export const projects = projectsNotResume.concat(projectsResume);
 
 export const experience = [
   {
+    id: "goeasy",
+    img:
+      "https://upload.wikimedia.org/wikipedia/commons/2/2b/DeloitteNewSmall.png",
+    icon: "https://media-exp1.licdn.com/dms/image/C4E0BAQHda-o9KT2w5Q/company-logo_200_200/0/1625689676984?e=2147483647&v=beta&t=y4-UjyA7OEgXO-8QfS0XFMZcQg8Ku-1k3P3Ux_nu-2M",
+    icon2: "https://upload.wikimedia.org/wikipedia/commons/2/2b/DeloitteNewSmall.png",
+    title: "Front-End Developer",
+    company: "goeasy LTD",
+    start: "Sep 2023",
+    end: "Dec 2023",
+    where: "Toronto, ON",
+    techs: "JavaScript, GraphQL, Apollo, Next.js",
+    desc: "",
+    did:
+      [
+        
+        "Collaborated to revamp vulnerability scan protocol in the development pipeline, improving detection and mitigation",
+        "Designed and developed a successful proof-of-concept AI education tool and delivered demonstrations to executives and employees, securing executive approval for its integration",
+        "Redesigned team branching strategy to meet project requirements and industry standards, communicated the improved processes through presentations and comprehensive documentation",
+
+        //"Revamped team branching strategy to meet project requirements and industry standards and collaborated with security personnel to enhance vulnerability scan protocol in the development pipeline, improving detection and mitigation",
+        //"Communicated the improved processes through presentations and comprehensive documentation",
+        "Streamlined front-end codebase and optimized Apollo GraphQL queries through strategic refactoring, improving maintainability and performance",
+      ],
+  },
+  {
+    id: "ford",
+    img:
+      "https://upload.wikimedia.org/wikipedia/commons/2/2b/DeloitteNewSmall.png",
+    icon: "https://media-exp1.licdn.com/dms/image/C4E0BAQHda-o9KT2w5Q/company-logo_200_200/0/1625689676984?e=2147483647&v=beta&t=y4-UjyA7OEgXO-8QfS0XFMZcQg8Ku-1k3P3Ux_nu-2M",
+    icon2: "https://upload.wikimedia.org/wikipedia/commons/2/2b/DeloitteNewSmall.png",
+    title: "Unreal Engine Developer",
+    company: "Ford Motor Companies",
+    start: "Jan 2023",
+    end: "Apr 2023",
+    where: "Ottawa, ON (Remote)",
+    techs: "C++, Unreal Engine 4",
+    desc: "",
+    did:
+      [
+        "Developed new features and fixes for in-vehicle infotainment system using C++ and Unreal Engine 4",
+        "Implemented and configured 10+ analytics actions system-wide to provide valuable user insights to developers",
+        //"Investigated and reported application bugs and performed bug-fixes",
+      ],
+  },
+  {
     id: "fleet",
     img:
       "https://uploads-ssl.webflow.com/60c7f12862eab431c781bc24/60c8e2b2d87c448861721c13_fleet-full-white.png",
@@ -151,12 +196,18 @@ export const experience = [
     did:
       [
         "Launched a user approval web tool with custom React components, managing data from 250+ users via Django REST",
-        "Implemented end-to-end CRUD operations, including batch user rollouts/removals and Stripe activations, using Django ORM and transactions, with PostgreSQL database",
+        "Implemented end-to-end CRUD operations, including batch user rollouts/removals and Stripe activations",
         "Built quick-add trip logging tool with custom screens to handle user reporting for 9000+ monthly trips in React Native",
-        "Overhauled mobile navigation and developed consolidated screens to decouple code and streamline user interface",
         //"Configured 10+ analytics actions app-wide to optimize user insights and efficiency with Segment",
         //"Investigated and reported IOS/Android app bugs using Bugsnag and performed ad-hoc bug-fixes",
         "Designed various UI components for web and mobile app with Figma",
+        // "Launched a user approval web tool with custom React components, managing data from 250+ users via Django REST",
+        // "Implemented end-to-end CRUD operations, including batch user rollouts/removals and Stripe activations, using Django ORM and transactions, with PostgreSQL database",
+        // "Built quick-add trip logging tool with custom screens to handle user reporting for 9000+ monthly trips in React Native",
+        // "Overhauled mobile navigation and developed consolidated screens to decouple code and streamline user interface",
+        // //"Configured 10+ analytics actions app-wide to optimize user insights and efficiency with Segment",
+        // //"Investigated and reported IOS/Android app bugs using Bugsnag and performed ad-hoc bug-fixes",
+        // "Designed various UI components for web and mobile app with Figma",
       ],
     },
   {
@@ -179,23 +230,23 @@ export const experience = [
         //"Researched, produced and published daily technical reports analyzing computer vulnerabilities and malicious software",
       ],
   },
-  {
-    id: "idealab",
-    img:
-      "./assets/idealab.jpeg",
-    icon: "./assets/idealab.jpeg",
-    title: "STEM Instructor",
-    company: "IdeaLab Kids Calgary",
-    start: "Nov 2019",
-    end: "Aug 2021",
-    where: "Calgary, AB",
-    desc: "Lead science, math, robotics, and programming classes of 10+ students in afterschool programs and summer camps",
-    did:
-      [
-        "Lead science, math, robotics, and programming classes of 10+ students in afterschool programs and summer camps",
-      ],
+  // {
+  //   id: "idealab",
+  //   img:
+  //     "./assets/idealab.jpeg",
+  //   icon: "./assets/idealab.jpeg",
+  //   title: "STEM Instructor",
+  //   company: "IdeaLab Kids Calgary",
+  //   start: "Nov 2019",
+  //   end: "Aug 2021",
+  //   where: "Calgary, AB",
+  //   desc: "Lead science, math, robotics, and programming classes of 10+ students in afterschool programs and summer camps",
+  //   did:
+  //     [
+  //       "Lead science, math, robotics, and programming classes of 10+ students in afterschool programs and summer camps",
+  //     ],
 
-  }
+  // }
 ]
 
 export const activities = [

@@ -33,7 +33,8 @@ function Education() {
             <h3>{rdata.education.program}</h3>
           </div>
           <div className="line">
-            <h4>{rdata.education.title} - {rdata.education.howAreMyGradesDoing}</h4>
+            {/* <h4>{rdata.education.title} - {rdata.education.howAreMyGradesDoing}</h4> */}
+            <h4>{rdata.education.title}</h4>
             <p>{rdata.education.start} - {rdata.education.end}</p>
           </div>
           {/* <p>∙ <strong>Relevant coursework: </strong>{rdata.education.courses}</p> */}
