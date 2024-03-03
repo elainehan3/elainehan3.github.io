@@ -3,8 +3,13 @@
 .app {
   height: 100vh;
   .sections {
+    background-color: $lightColor;;
+    opacity: 0.8;
+    background-image:  linear-gradient(#efefef 1px, transparent 1px), linear-gradient(to right, #efefef 1px, #ffffff 1px);
+    background-size: 50px 50px;
+    background-attachment: fixed;
+    //background-image: url(../public/assets/bg.jpeg);
     width: 100%;
-    background: $lightColor;
     position: relative;
     top: 30px;
     scroll-behavior: smooth;
@@ -20,5 +25,20 @@
       //height: $pageHeight;
       //scroll-snap-align: start; 
     }
+    img.background-flower-top {
+      width: 350px;
+      position: fixed;
+      top: $topBarHeight;
+      right: 0;
+      z-index: -10;
+    }
+    img.background-flower-bottom {
+      width: 500px;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      z-index: -10;
+    }
   }
+
 }

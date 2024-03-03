@@ -12,6 +12,15 @@ import ResumePage from './ResumePage';
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false)
+  const [color, setColor] = useState(false);
+  const changeNavbarColor = () => {
+    if (window.scrollY >= 80) {
+      setColor(true);
+    } else {
+      setColor(false);
+    }
+  }
+  window.addEventListener('scroll', changeNavbarColor);
   // // only for building resume
   // if (location.pathname === "/resumeonly") {
   //   return (
@@ -23,7 +32,7 @@ function App() {
   // //erase above in commit
   return (
     <div className="app">
-      <Topbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+      <Topbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} setColor={setColor}/>
       <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       <div className="sections">
         <Routes>
@@ -39,6 +48,8 @@ function App() {
           </Route>
         </Routes>
         <Contact />
+        <img src="assets/border2.png" alt="" className="background-flower-top" />
+        <img src="assets/border.png" alt="" className="background-flower-bottom" />
       </div>
     </div>
   );

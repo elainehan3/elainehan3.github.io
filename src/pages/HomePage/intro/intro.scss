@@ -1,11 +1,10 @@
 @import "../../../global.scss";
 
 .intro {
-  background-color: $lightColor;
   display: flex;
   height: $pageHeight;
-  min-height: 400px;
-  max-height: 650px;
+  min-height: 600px;
+  max-height: 1200px;
   overflow: hidden;
   @include mobile {
     height: 500px;
@@ -13,18 +12,14 @@
     align-items: center;
   }
   .left {
-    flex: 5;
+    flex: 6;
     overflow: hidden;
     transition: flex 1s ease;
-    @media (max-width: 900px) {
-      flex: 4;
-    }
     .imgContainer {
-      width: 60vw;
-      height: 60vw;
-      min-width: 700px;
-      min-height: 700px;
-      background-color: $circleColor;
+      width: 100vh;
+      height: 100vh;
+      min-width: 600px;
+      min-height: 600px;
       border-radius: 50%;
       display: flex;
       align-items: flex-end;
@@ -35,7 +30,7 @@
         align-items: flex-start;
       }
       img {
-        height: 90%;
+        height: 100%;
         @include mobile{
           height: 50%;
         }
@@ -44,16 +39,14 @@
   }
   .right {
     display: flex;
-    flex: 5;
+    flex: 3;
     position: relative;
     align-items: center;
-    @include mobile{
-      flex: 5;
-    }
     .wrapper {
       width: 100%;
       //height: 100%;
       padding-left: 50px;
+      padding-right: 20px;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -64,7 +57,7 @@
       }
       .l1 {
         font-weight: 300;
-        font-size: 80px;
+        font-size: 90px;
         @include mobile{
           font-size: 50px;
         }
@@ -76,31 +69,33 @@
       }
       .l2 {
         font-weight: 300;
-        font-size: 50px;
+        font-size: 60px;
         @include mobile{
-          font-size: 32px;
+          font-size: 40px;
         }
         span {
-          font-family: $headerFonts;
+          text-decoration: underline $purpleColor ;
+          font-family: 'Clicker Script', cursive;
         }
       }
       .l3 {
         margin-top: 10px;
         font-weight: 300;
-        font-size: 30px;
+        font-size: 40px;
         .ityped-cursor {
           animation: blink 1s infinite;
         }
         span {
+          color: $linkColor;
           font-family: $headerFonts;
-          color: $flowerMainColor;
+          
         }
         @keyframes blink {
             50%{opacity: 1;}
             100%{opacity: 0;}
         }
         @include mobile{
-          font-size: 18px;
+          font-size: 30px;
         }
       }
     }

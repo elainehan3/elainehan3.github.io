@@ -5,6 +5,12 @@ $veryLightMainColor: #fff5f8;
 $mainTranspColor: #f08098f5;
 $lightColor: white;
 $darkColor: #051225;
+
+
+$purpleColor: #d185a5;
+$yellowColor: #ffca7d;
+
+
 $flowerMainColor: #f08098;
 $grey1Color: #808080;
 $cinnamon-satin: #f092b7;
@@ -24,9 +30,9 @@ $background2Color: white;
 
 //#fbd0da w #5f071c
 //2e2f4a #212529
-$headerFonts: 'Montserrat', Arial, Helvetica, sans-serif;
-$header2Fonts: 'Montserrat', Arial, Helvetica, sans-serif;
-$cardHeadFont: 'Montserrat', Arial, Helvetica, sans-serif;
+$headerFonts: 'Amatic SC', Arial, Helvetica, sans-serif;
+$header2Fonts: 'Amatic SC', Arial, Helvetica, sans-serif;
+$cardHeadFont: 'Amatic SC', Arial, Helvetica, sans-serif;
 $cardColor: #ffffff;
 $cardColorDark: #f0ebf4;
 
@@ -44,6 +50,10 @@ $mobileWidth: 768px;
     }
 }
 
+h1, h2, h3, h4, h5, h6, a, Link, NavLink {
+  letter-spacing: 0.05em;
+}
+
 h3, h4, h5, h6 {
   font-family: $header2Fonts;
   font-weight: 400;
@@ -53,8 +63,8 @@ h3, h4, h5, h6 {
   //font-family: 'Source Sans Pro', sans-serif;
 }
 
-a, Link {
-  font-size: 16px;
+a, Link, NavLink {
+  font-size: 25px;
   color: $linkColor;
   font-family: $header2Fonts;
   text-decoration: none;
@@ -71,8 +81,8 @@ p {
 h1 {
   text-transform: uppercase;
   font-family: $headerFonts;
-  font-weight: 300;
-  font-size: 50px;
+  font-weight: 700;
+  font-size: 60px;
   @include mobile{
     font-size: 40px;
   }
@@ -80,33 +90,33 @@ h1 {
 h2 {
   font-family: $headerFonts;
   text-transform: uppercase;
-  font-weight: 300;
-  font-size: 30px;
+  font-weight: 700;
+  font-size: 40px;
   @include mobile{
     font-size: 25px;
   }
 }
 h3 {
   text-transform: uppercase;
-  font-size: 25px;
+  font-size: 35px;
   @include mobile{
     font-size: 20px;
   }
 }
 
 h4 {
-  font-size: 20px;
+  font-size: 30px;
 }
 
 h5 {
-  font-size: 15px;
+  font-size: 25px;
 }
 
 h6 {
   text-transform: uppercase;
-  font-size: 25px;
+  font-size: 35px;
   @include mobile{
-    font-size: 20px;
+    font-size: 30px;
   }
 }
 

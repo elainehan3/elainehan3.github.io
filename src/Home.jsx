@@ -16,7 +16,6 @@ function Home() {
           <AboutMe />
           <Projects />
           <Experience />
-          {/* <Testimonials/> */}
         </div>
       </div>
     </div>

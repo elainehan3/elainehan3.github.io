@@ -1,11 +1,11 @@
 import "./topbar.scss";
 //import { LinkedIn } from "@mui/icons-material";
 import { menuLinks } from "../../../data/siteData";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
-export default function Topbar({ menuOpen, setMenuOpen }) {
+export default function Topbar({ menuOpen, setMenuOpen }, {color, setColor}) {
   return (
-    <div className={"topbar " + (menuOpen && "active")}>
+    <div className={color ? "topbar white" + (menuOpen && "active") : "topbar " + (menuOpen && "active") }>
       <div className="wrapper">
         <div className="left">
           <a href="/" className="logo">
@@ -15,7 +15,10 @@ export default function Topbar({ menuOpen, setMenuOpen }) {
         <div className="right">
           <div className="itemContainer">
             {menuLinks.map((m) => (
-              <Link to={m.link}>{m.title}</Link>
+              <NavLink to={m.link}
+              className={({ isActive }) => isActive ? "myActive" : "myInactive"}>
+                <span>*</span>{m.title}
+              </NavLink>
             ))}
             {/* <div className="icon">
               <a href="https://www.linkedin.com/in/elainehan3/" ><LinkedIn className="icon" /></a>

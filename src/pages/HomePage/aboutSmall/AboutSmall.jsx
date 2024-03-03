@@ -25,7 +25,7 @@ export default function AboutSmall() {
           </div>
         </div>
       </div>
-      <div className="skills" id="skills">
+      {/* <div className="skills" id="skills">
 
         <div className="textAndPicture">
           <div className="text-picture-container">
@@ -40,7 +40,7 @@ export default function AboutSmall() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

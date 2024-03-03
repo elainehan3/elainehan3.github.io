@@ -1,15 +1,16 @@
 @import "../../../global.scss";
 
 .projects {
-  background-color: $background1Color;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   overflow-x: hidden;
   row-gap: 30px;
-  
+  background-color: $lightColor;
+opacity: 0.8;
+background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #ffffff 10px ), repeating-linear-gradient( #add8e655, $linkColor );
   h1 {
-    color: $lightColor;
+    color: $darkColor;
   }
 }

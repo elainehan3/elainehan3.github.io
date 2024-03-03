@@ -9,6 +9,19 @@
   top: 0;
   z-index: 4;
 
+  .myActive {
+    display:flex;
+    span {
+      color: $linkHColor;
+      display:flex
+    }
+  }
+  .myInactive {
+    span {
+      display:none
+    }
+  }
+
   .wrapper {
     padding: 10px $sidePadding;
     display: flex;
@@ -21,7 +34,7 @@
       justify-content: center;
       .logo {
         font-family: $headerFonts;
-        font-size: 30px;
+        font-size: 40px;
         font-weight: 300;
         text-transform: uppercase;
         text-decoration: none;
@@ -46,7 +59,7 @@
         a {
           text-transform: uppercase;
           font-weight: 400;
-          font-size: 16px;
+          font-size: 25px;
           text-decoration: none;
           color: $topBarLinkColor;
           margin: 0 10px;
