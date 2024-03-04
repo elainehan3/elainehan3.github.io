@@ -8,6 +8,7 @@ export default function Topbar({ menuOpen, setMenuOpen }, {color, setColor}) {
     <div className={color ? "topbar white" + (menuOpen && "active") : "topbar " + (menuOpen && "active") }>
       <div className="wrapper">
         <div className="left">
+          
           <a href="/" className="logo">
             Elaine Han
           </a>

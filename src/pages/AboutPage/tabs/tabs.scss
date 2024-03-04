@@ -1,7 +1,6 @@
 @import "../../../global.scss";
 
 .tabs {
-  background-color: $lightColor;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -26,7 +25,7 @@
   }
   .tab-container {
     width: 100%;
-    background-color: $veryLightMainColor;
+    background-color: #F4E5EB;
     padding: 30px;
   }
 }
@@ -54,8 +53,8 @@
   
   
   &.active {
-    color: $mainColor;
-    background-color: $veryLightMainColor;
+    color: $purpleColor;
+    background-color: #F4E5EB;
     h3 {
       font-size: 22px;
       @media (max-width: 690px) {
@@ -63,7 +62,7 @@
       }
     }
     .item {
-      background-color: $mainColor;
+      background-color: $yellowColor;
       color: $lightColor;
     }
     img {
@@ -81,7 +80,7 @@
     }
   }
   &:hover {
-    color: $mainColor;
+    color: $purpleColor;
   }
   
 
@@ -94,7 +93,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: $lightColor;
+    color: $purpleColor;
     position: relative;
     cursor: pointer;
 

@@ -34,9 +34,9 @@ export const categories = [
 export const hobbies = [
   {
     id: 1,
-    title: "Spending time with my dog Pooky",
+    title: "Going on adventures with my dog Pooky",
     img:
-      "assets/me-fall.jpg",
+      "assets/pooky2024.jpg",
   },
   {
     id: 2,
@@ -48,7 +48,7 @@ export const hobbies = [
     id: 3,
     title: "Drawing (I like doing landscapes)!",
     img:
-      "assets/me-drawing.webp",
+      "assets/drawing.jpg",
   },
   {
     id: 4,
