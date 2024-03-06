@@ -3,12 +3,11 @@
 .app {
   height: 100vh;
   .sections {
-    background-color: $lightColor;;
+    background-color: $lightColor;
     opacity: 0.8;
     background-image:  linear-gradient(#efefef 1px, transparent 1px), linear-gradient(to right, #efefef 1px, #ffffff 1px);
     background-size: 50px 50px;
     background-attachment: fixed;
-    //background-image: url(../public/assets/bg.jpeg);
     width: 100%;
     position: relative;
     top: 30px;

@@ -8,7 +8,7 @@ export const aboutPhoto = {
   id: 1,
   title: "Photo",
   img:
-    "assets/me-park.jpg",
+    "assets/elaine2024-5.jpg",
 }
 
 export const categories = [
