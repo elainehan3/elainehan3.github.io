@@ -54,33 +54,40 @@
 }
 .resume h1 {
   font-size: 22pt;
+  letter-spacing: normal;
 }
 .resume h2 {
   font-size: 14pt;
+  letter-spacing: normal;
 }
 .resume h3 {
-  font-size: 12.5pt;
+  font-size: 12pt;
   font-weight: bold;
   text-transform: unset;
+  letter-spacing: normal;
 }
 .resume h4 {
   font-size: 11pt;
   text-transform: unset;
+  letter-spacing: normal;
 }
 .resume h5 {
   font-size: 11pt;
   font-weight: bold;
   text-transform: unset;
+  letter-spacing: normal;
 }
 .resume h6 {
   font-size: 11pt;
   font-weight: normal;
   text-transform: unset;
+  letter-spacing: normal;
 }
 .resume p {
   margin-left: 10px;
-  font-size: 10pt;
+  font-size: 9pt;
   text-indent: -10px;
+  letter-spacing: normal;
 }
 .resume a {
   all: unset;

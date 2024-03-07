@@ -14,7 +14,7 @@ class KaraokeMachine extends Component {
             </header>
             <span className="descrip">A web karaoke machine!</span>
           </div>
-          <button className="ktv-btn" type="submit">CHECK IT OUT ></button>
+          <a  href="https://elainehan3.github.io/karaoke-room"><button className="ktv-btn" >CHECK IT OUT ></button></a>
         </div>
       </div>
     );

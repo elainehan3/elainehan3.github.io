@@ -4,6 +4,7 @@
 import React, { useState } from "react"
 import "./findneedle.scss";
 import Confetti from "./Confetti"
+import { wait } from "@testing-library/user-event/dist/utils";
 
 export default function FindNeedle() {
   const needleWidth = 45;
@@ -19,6 +20,7 @@ export default function FindNeedle() {
   }
   const [PosY, setPosY] = useState(getRandY(imgHeight));
   const [PosX, setPosX] = useState(getRandX(90));
+  const [hayPicture, setHayPicture] = useState("assets/hay1.jpeg")
 
 
 
@@ -28,6 +30,7 @@ export default function FindNeedle() {
     setShowPlayAgain(false);
     setPosY(getRandY(imgHeight));
     setPosX(getRandX(90));
+    setHayPicture(`assets/hay${Math.floor(Math.random() * 8) + 1}.jpeg`)
   }
 
 
@@ -43,19 +46,20 @@ export default function FindNeedle() {
     <div className="findneedle" id="findneedle">
       <div className="needleHead">
         <div className="needleTitle"><img src="./assets/haystack.png" alt="" />
-          <h2>Needle in a haystack</h2>
+          <h2>Needle In A Haystack</h2>
         </div>
         <div className="descr">
           <p>Find the</p><img className="icon" src="assets/needleblack.svg" alt="needle" /><p> hidden in the image below!</p>
         </div>
       </div>
       <div className="gameBox">
+        
         <div className="img-back-cont">
           <img className="back"
-            src="assets/twisted-pile-of-hay.jpeg"
+            src={hayPicture}
             alt="hay"
             style={{
-              //opacity: found ? 0 : 1,
+              opacity: found ? 0.7 : 1,
             }} />
         </div>
         <div className={found ? "needle-wrapper found" : "needle-wrapper"}
@@ -67,11 +71,8 @@ export default function FindNeedle() {
           }}>
           <img className="needle"
             onClick={isFound}
-            src={found ? "assets/needlewhite.svg" : "assets/needlewhite.svg"}
+            src={"assets/needlewhite.svg"}
             alt="needle"
-            style={{
-              opacity: found ? 1 : 0.5,
-            }}
           />
         </div>
         <div className={showPlayAgain ? "foundDis display" : "foundDis"}>
